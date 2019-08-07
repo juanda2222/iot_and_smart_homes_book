@@ -1,0 +1,50 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}introduccion}{4}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Resumen}{4}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Contexto introductorio}{5}{subsection.1.2}% 
+\contentsline {subsection}{\numberline {1.3}Planteamiento del problema}{5}{subsection.1.3}% 
+\contentsline {subsection}{\numberline {1.4}Justificaci\IeC {\'o}n}{7}{subsection.1.4}% 
+\contentsline {subsection}{\numberline {1.5}Objetivos}{8}{subsection.1.5}% 
+\contentsline {subsubsection}{\numberline {1.5.1}Objetivo general}{8}{subsubsection.1.5.1}% 
+\contentsline {subsubsection}{\numberline {1.5.2}Objetivos especificos}{8}{subsubsection.1.5.2}% 
+\contentsline {subsection}{\numberline {1.6}Lineamientos de desarrollo}{9}{subsection.1.6}% 
+\contentsline {subsection}{\numberline {1.7}Dise\IeC {\~n}o Generalizado}{10}{subsection.1.7}% 
+\contentsline {section}{\numberline {2}Marco Teorico}{13}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Arquitectura.}{13}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Programacion orientada a objetos}{13}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Servidor}{14}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.4}TCP y TLS}{14}{subsection.2.4}% 
+\contentsline {subsection}{\numberline {2.5}JWT}{14}{subsection.2.5}% 
+\contentsline {subsection}{\numberline {2.6}Mqtt}{14}{subsection.2.6}% 
+\contentsline {subsection}{\numberline {2.7}Http}{14}{subsection.2.7}% 
+\contentsline {subsection}{\numberline {2.8}Serverless}{14}{subsection.2.8}% 
+\contentsline {subsection}{\numberline {2.9}Backend}{14}{subsection.2.9}% 
+\contentsline {subsection}{\numberline {2.10}Aplicaci\IeC {\'o}n web.}{15}{subsection.2.10}% 
+\contentsline {subsection}{\numberline {2.11}Aplicaci\IeC {\'o}n de escritorio.}{15}{subsection.2.11}% 
+\contentsline {subsection}{\numberline {2.12}Frontend}{15}{subsection.2.12}% 
+\contentsline {subsection}{\numberline {2.13}Dispositivo}{15}{subsection.2.13}% 
+\contentsline {section}{\numberline {3}Api de animaci\IeC {\'o}n}{17}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Investigacion y conceptualizaci\IeC {\'o}n}{17}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}Api de java}{18}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.3}Api de Python y Qt}{23}{subsection.3.3}% 
+\contentsline {section}{\numberline {4}House Manager}{25}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Requerimientos Funcionales}{26}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Funciones adicionales}{27}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.3}Algoritmos Utilizados}{29}{subsection.4.3}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Scheduler Handler}{30}{subsubsection.4.3.1}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Remote Mode Handler}{30}{subsubsection.4.3.2}% 
+\contentsline {subsubsection}{\numberline {4.3.3}Mail Notification Handler}{30}{subsubsection.4.3.3}% 
+\contentsline {subsubsection}{\numberline {4.3.4}Data Report Handler}{30}{subsubsection.4.3.4}% 
+\contentsline {subsubsection}{\numberline {4.3.5}Indicator Handler}{30}{subsubsection.4.3.5}% 
+\contentsline {subsection}{\numberline {4.4}Serverless Backend}{31}{subsection.4.4}% 
+\contentsline {subsection}{\numberline {4.5}Requerimientos Funcionales}{31}{subsection.4.5}% 
+\contentsline {subsection}{\numberline {4.6}Cloud functions}{31}{subsection.4.6}% 
+\contentsline {subsection}{\numberline {4.7}Function 1}{32}{subsection.4.7}% 
+\contentsline {subsection}{\numberline {4.8}Function 2}{32}{subsection.4.8}% 
+\contentsline {subsection}{\numberline {4.9}Function 3}{32}{subsection.4.9}% 
+\contentsline {section}{\numberline {5}User app}{33}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Requerimientos Funcionales}{33}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Funciones adicionales}{33}{subsection.5.2}% 
+\contentsline {subsection}{\numberline {5.3}Algoritmos Utilizados}{41}{subsection.5.3}% 
+\contentsline {subsubsection}{\numberline {5.3.1}Scheduler Handler}{41}{subsubsection.5.3.1}% 
+\contentsline {subsubsection}{\numberline {5.3.2}Remote Mode Handler}{41}{subsubsection.5.3.2}% 

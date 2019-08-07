@@ -1,0 +1,72 @@
+% Principal Anteproy
+
+\include{secciones-ante/header}%este es de configuracion de la typografia general
+
+\usepackage[table,xcdraw]{xcolor} %este es una libreria para tablas bonitas
+\usepackage{longtable}%este es necesario cuando se tienen tablas grandes
+\usepackage{booktabs} %este es necesario para usar el exel2latex 
+
+\usepackage[utf8]{inputenc}%este es para poder tener tildes de una
+\usepackage{hyperref}
+\usepackage{graphicx}%libreria para insertar imagenes
+\hfuzz=.7pt %this one is used to ignore the half letther spceson paragraph problems
+
+%to remoove the default tittle of the bibliograpy import:
+\renewcommand{\bibname}{}
+
+
+
+\begin{document}
+\pagestyle{empty}
+
+\include{secciones-ante/portada}
+\include{secciones-ante/contraportada}
+
+\renewcommand{\thepage}{\roman{page}} \setcounter{page}{2}%pongo la enumeracion romana en 2
+\tocloftpagestyle{fancy} %Estilo de la pagina de la table de contenido
+\tableofcontents %pongo tabla de ocntenido
+\newpage
+
+\listoffigures %en otra pagina pongo las dos tablas restantes
+\listoftables
+\newpage
+
+\renewcommand{\thepage}{\arabic{page}} \setcounter{page}{4}
+\pagestyle{fancy}%estilo de los demas apartados:
+
+\include{secciones-grado/introduccion}
+\include{secciones-grado/marcoteo}
+%\include{secciones-ante/problema}
+
+%\include{secciones-ante/objetivos}
+%\include{secciones-ante/resu\right) ltadosesperados}
+%\include{secciones-ante/justificacion}
+%\include{secciones-grado/marcoteorico}
+
+%\include{secciones-ante/antecedentes}
+%\include{secciones-ante/marcoteo}
+
+%\include{secciones-ante/metodologia}
+%\include{secciones-ante/cronograma}
+%\include{secciones-ante/presupuesto}
+
+\include{secciones-grado/api}
+\include{secciones-grado/housemanager}
+\include{secciones-grado/backend}
+\include{secciones-grado/mobileapp}
+
+
+
+%-----------referencias------------------
+%\section{Referencias}
+
+\bibliography{bibliografia_anteproyecto_v1}
+\nocite{*}
+\bibliographystyle{apalike} %iee
+
+%-------------------------------------
+\end{document}
+
+%********************
+%%% FIN DEL DOCUMENTO!
+%********************

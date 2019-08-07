@@ -1,0 +1,112 @@
+% header
+\documentclass[12pt, titlepage,oneside]{article}
+% ******** vmargin settings *********
+\usepackage{vmargin} %This give you full control over the used page area, it maybe not the idea od Latex to do so, but I wanted to reduce to amount of white space on the page
+%\setcitestyle{round,authoryear,citesep={;}, aysep={,}}
+\setpapersize{USletter}
+\setmarginsrb{4cm}%			%linker Rand, left edge --- izquierda
+{2cm}%     %oberer Rand, top edge  --- arriba
+{3cm}%		% -- derecha
+{2cm}%   % -- abajo
+{12pt}%			%Kopfzeilenhöhe, header hight
+{1cm}%   	  %Kopfzeilenabstand, header distance
+{12pt}%				%Fußzeilenhoehe footer hight
+{1cm}%    	  %Fusszeilenabstand, footer distance   
+% ********* Lenguage definition *******
+
+\usepackage[spanish]{layout}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{bbm}
+\usepackage{tocloft}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage[flushleft]{threeparttable}
+
+\usepackage{makeidx}
+\usepackage{lmodern}
+\usepackage{kpfonts}
+\usepackage{multirow}
+\usepackage{booktabs}
+% ********* Graphics definition *******
+%\usepackage [dvips]             {graphicx}
+%\usepackage{colortbl}
+\usepackage[pdftex]{graphicx} % required to import graphic files
+\usepackage{color} 	  % allows to mark some entries in the tables with color
+\usepackage{eso-pic}  % these two are required to add the little picture on top of every page
+\usepackage{everyshi} % these two are required to add the little picture on top of every page
+\usepackage{apacite}
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[numbers]{natbib}
+\bibliographystyle{IEEEtranN}
+
+% ******************* Entornos adicionales. ********************************
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\newtheorem{teo}{Teorema}
+\newtheorem{defi}{Definici\'on}
+\newtheorem{rem}{Remarque}
+\newtheorem{col}{Coloquial}
+\newtheorem{notacion}{Notaci\'on\'}
+\newtheorem{eje}{Ejemplo}
+\newtheorem{hip}{Hip\'otesis}
+\newcommand{\bh}{\begin{hip}}
+\newcommand{\eh}{\end{hip}}
+
+\renewcommand{\contentsname}{Tabla de Contenido}
+\renewcommand{\listtablename}{Lista de Tablas}
+\renewcommand{\listfigurename}{Lista de Figuras}
+\renewcommand{\refname}{REFERENCIAS}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\cfttabfont}{Tabla }
+\renewcommand{\cftfigfont}{Figura }
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} %Para centrar y ajustar tamaño de la columna de una tabla
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} %Para alinear a la derecha y ajustar tamaño de la columna de una tabla
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}%Para alinear a la izquierda y ajustar tamaño de la columna de una tabla
+\newcolumntype{M}{>{$\vcenter\bgroup\hbox\bgroup}c<{\egroup\egroup$}} %Para centrar verticalmente el contenido de una celda de una tabla
+\typeout{Copyright Alejandro Gil Caicedo} % No cambiar esta linea-
+
+\hyphenation{po-si-bles
+al-can-za-bles al-can-za-bi-li-dad lo-cal-ment-te a-que-llas
+re-pre-sen-ta-cio-nes cons-tan-te ins-tan-te mo-de-lo es-ta-dos
+con-tro-la-ble con-tro-la-bi-li-dad de-sa-rro-llar-se re-fe-ren-cias
+Co-lo-ra-do co-rri-en-te re-fe-ren-cia}
+
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+%\setlength{\topmargin}{2.5 cm}
+%\setlength{\headheight}{0.7 cm}
+%\setlength{\headsep}{1 cm}
+%\setlength{\textheight}{19 cm}
+%\setlength{\oddsidemargin}{0.5 cm}
+%\setlength{\footskip}{0.85 cm}
+%\setlength{\textwidth}{16 cm}
+%\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[L]{\footnotesize\bfseries Implementacion de un manejador de recursos con inteligencia ambiental para una ...}
+%\fancyhead[R]{\bfseries\leftmark}
+%\frontmatter
+%\fancyhead[R]{\footnotesize \bfseries Doctorado en Ingeniería, Pag.\thepage}
+%\fancyhead[R]{\footnotesize\bfseries Énfasis en Automática, Pag.\thepage}
+%\fancyhead[R]{\footnotesize\bfseries Énfasis en Eléctrica, Pag.\thepage}
+%\fancyhead[R]{\footnotesize\bfseries Énfasis en Electrónica, Pag.\thepage}
+\fancyhead[R]{\footnotesize\bfseries Pag. \thepage}
+%\fancyfoot[L]{\footnotesize\textbf{Nombre del Autor}}
+
+\fancyfoot[R]{\footnotesize\textbf{Propuesta de Trabajo de Grado}}
+%\fancyfoot[R]{\footnotesize\textbf{Propuesta de Tesis - Doctorado-.}}
+

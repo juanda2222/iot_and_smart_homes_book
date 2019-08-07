@@ -1,0 +1,51 @@
+\section{Metodología}
+
+Como necesidad inicial se deben definir los requerimientos del sistema utilizando una hoja de requerimientos RUP, luego se dividirán los productos software requeridos en este proyecto como mini proyectos independientes y finalmente habrá una fase integradora en la cual se deberá completar el diseño del sistema. A continuación se describirán detalladamente las sub etapas del proyecto utilizando la lógica mencionada anteriormente.
+
+\begin{enumerate}
+
+\item \textbf{Fase de investigación y conceptualización:} Para el desarrollo de esta fase es necesario realizar indagaciones y selección de los sistemas de desarrollo que se van a utilizar para el proyecto.
+
+
+  \begin{enumerate}
+    \item \textbf{Actividad 1:} Ampliar el campo conceptual y teórico del proyecto investigando  proyectos o implementaciones similares a la planteada.
+    \item \textbf{Actividad 2:} Indagar sobre las arquitecturas hardware existentes y seleccionar la que ofrezca el mejor balance costo beneficio.
+    \item \textbf{Actividad 3:} Actualizar los requerimiento funcionales y no funcionales del sistema usando documentación y formato RUP.
+	\end{enumerate}
+    
+\item Fase de diseño del HMI en sitio: En esta fase se realizará el diseño gráfico de la interfaz, la selección del lenguaje de programación para la interfaz HMI (se le dedicará un tiempo a la familiarización y aprendizaje del lenguaje) y finalmente se realizará la implementación de la arquitectura deseada con los requerimientos dados.
+
+  \begin{enumerate}
+      \item \textbf{Actividad 1:} Diseñar la interfaz HMI, definiendo las formas internas del marco gráfico y la paleta de colores utilizada.
+      \item \textbf{Actividad 2:} Seleccionar el lenguaje de programación e investigar sobre ejemplos de utilización para interfaces gráficas.
+      \item \textbf{Actividad 3:} Desarrollar el paquete de aplicación para botones, botones desplegables, fondos y menús de usuario.
+      \item \textbf{Actividad 4:} Realizar pruebas de errores.
+	\end{enumerate}
+	
+\item \textbf{Fase de Desarrollo del aplicativo en sitio:} Durante esta fase se desarrollarán todos los componentes programáticos necesarios para correr un servicio de vivienda inteligente utilizando los paquetes gráficos desarrollados anteriormente.    
+
+	\begin{enumerate}
+      \item \textbf{Actividad 1:} Montar y seleccionar un servicio que permite instanciar un  servidor local en el módulo hardware.
+      \item \textbf{Actividad 2:} Diseñar un paquete software donde se mapee el acceso a la base de datos de manera generalizada con el objetivo de permitir el escalamiento del programa.
+      \item \textbf{Actividad 3:} Integrar el diseño del paquete HMI con el servicio de manejo de bases de datos.
+      \item \textbf{Actividad 4:} Realizar pruebas del programa integrado con el HMI
+	\end{enumerate}
+
+\item Fase de desarrollo del aplicativo móvil: Para esta fase se debe desarrollar una interfaz gráfica con acceso a una base de datos donde se le dé al usuario la sensación de estar interactuando con una casa inteligente.
+
+    \begin{enumerate}
+      \item \textbf{Actividad 1:} Seleccionar e investigar frameworks que faciliten desarrollo de aplicaciones móviles.
+      \item \textbf{Actividad 2:} Desarrollar la sección gráfica de la aplicación.
+      \item \textbf{Actividad 3:} Desarrollar el paquete que contenga los métodos donde se mapee el acceso a la base de datos.
+      \item \textbf{Actividad 4:} Realizar pruebas de los métodos de acceso a la base de datos en conjunto con la interfaz gráfica.
+\end{enumerate}
+
+\item Fase de Integración: En esta fase se realizará la integración de todos los sistemas de software descritos anteriormente, como se explica a continuación.
+
+    \begin{enumerate}
+      \item \textbf{Actividad 1:} Integrar el diseño de la aplicación con la vivienda real del solar decathlon.
+      \item \textbf{Actividad 2:} Integrar la aplicación móvil con la vivienda.
+      \item \textbf{Actividad 3:} Realizar pruebas del sistema funcionando de manera conjunta.
+    \end{enumerate}
+
+\end{enumerate}

@@ -1,0 +1,49 @@
+\BOOKMARK [1][-]{section.1}{introduccion}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Resumen}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Contexto introductorio}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Planteamiento del problema}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Justificaci\363n}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{Objetivos}{section.1}% 6
+\BOOKMARK [3][-]{subsubsection.1.5.1}{Objetivo general}{subsection.1.5}% 7
+\BOOKMARK [3][-]{subsubsection.1.5.2}{Objetivos especificos}{subsection.1.5}% 8
+\BOOKMARK [2][-]{subsection.1.6}{Lineamientos de desarrollo}{section.1}% 9
+\BOOKMARK [2][-]{subsection.1.7}{Dise\361o Generalizado}{section.1}% 10
+\BOOKMARK [1][-]{section.2}{Marco Teorico}{}% 11
+\BOOKMARK [2][-]{subsection.2.1}{Arquitectura.}{section.2}% 12
+\BOOKMARK [2][-]{subsection.2.2}{Programacion orientada a objetos}{section.2}% 13
+\BOOKMARK [2][-]{subsection.2.3}{Servidor}{section.2}% 14
+\BOOKMARK [2][-]{subsection.2.4}{TCP y TLS}{section.2}% 15
+\BOOKMARK [2][-]{subsection.2.5}{JWT}{section.2}% 16
+\BOOKMARK [2][-]{subsection.2.6}{Mqtt}{section.2}% 17
+\BOOKMARK [2][-]{subsection.2.7}{Http}{section.2}% 18
+\BOOKMARK [2][-]{subsection.2.8}{Serverless}{section.2}% 19
+\BOOKMARK [2][-]{subsection.2.9}{Backend}{section.2}% 20
+\BOOKMARK [2][-]{subsection.2.10}{Aplicaci\363n web.}{section.2}% 21
+\BOOKMARK [2][-]{subsection.2.11}{Aplicaci\363n de escritorio.}{section.2}% 22
+\BOOKMARK [2][-]{subsection.2.12}{Frontend}{section.2}% 23
+\BOOKMARK [2][-]{subsection.2.13}{Dispositivo}{section.2}% 24
+\BOOKMARK [1][-]{section.3}{Api de animaci\363n}{}% 25
+\BOOKMARK [2][-]{subsection.3.1}{Investigacion y conceptualizaci\363n}{section.3}% 26
+\BOOKMARK [2][-]{subsection.3.2}{Api de java}{section.3}% 27
+\BOOKMARK [2][-]{subsection.3.3}{Api de Python y Qt}{section.3}% 28
+\BOOKMARK [1][-]{section.4}{House Manager}{}% 29
+\BOOKMARK [2][-]{subsection.4.1}{Requerimientos Funcionales}{section.4}% 30
+\BOOKMARK [2][-]{subsection.4.2}{Funciones adicionales}{section.4}% 31
+\BOOKMARK [2][-]{subsection.4.3}{Algoritmos Utilizados}{section.4}% 32
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Scheduler Handler}{subsection.4.3}% 33
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Remote Mode Handler}{subsection.4.3}% 34
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Mail Notification Handler}{subsection.4.3}% 35
+\BOOKMARK [3][-]{subsubsection.4.3.4}{Data Report Handler}{subsection.4.3}% 36
+\BOOKMARK [3][-]{subsubsection.4.3.5}{Indicator Handler}{subsection.4.3}% 37
+\BOOKMARK [2][-]{subsection.4.4}{Serverless Backend}{section.4}% 38
+\BOOKMARK [2][-]{subsection.4.5}{Requerimientos Funcionales}{section.4}% 39
+\BOOKMARK [2][-]{subsection.4.6}{Cloud functions}{section.4}% 40
+\BOOKMARK [2][-]{subsection.4.7}{Function 1}{section.4}% 41
+\BOOKMARK [2][-]{subsection.4.8}{Function 2}{section.4}% 42
+\BOOKMARK [2][-]{subsection.4.9}{Function 3}{section.4}% 43
+\BOOKMARK [1][-]{section.5}{User app}{}% 44
+\BOOKMARK [2][-]{subsection.5.1}{Requerimientos Funcionales}{section.5}% 45
+\BOOKMARK [2][-]{subsection.5.2}{Funciones adicionales}{section.5}% 46
+\BOOKMARK [2][-]{subsection.5.3}{Algoritmos Utilizados}{section.5}% 47
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Scheduler Handler}{subsection.5.3}% 48
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Remote Mode Handler}{subsection.5.3}% 49

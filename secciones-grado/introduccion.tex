@@ -1,0 +1,28 @@
+\section{introduccion}
+
+\input{secciones-grado/resumen}
+\input{secciones-ante/introduccion}
+\input{secciones-ante/problema}
+\input{secciones-ante/justificacion}
+\input{secciones-ante/objetivos}
+\input{secciones-ante/resultadosesperados}
+
+\subsection{Diseño Generalizado}
+
+El sistema diseñado se diseño con las mejores condiciones de; modularidad, costo, tamaño y escalabilidad. Para cada uno de estas caracteristicas se ecogieron tecnologias y se desarrollaron funciones claves. 
+
+Desde la perspectiva de la modularidad, se desarrollaron aplicaciones de frontend capaces de integrarse con 2 tipos de protocolos de comunicacion: mqtts y https, ademas, para acceder a los servicios de la nube se implemento el servicio de backend en la plataforma "Google Cloud Plataform" puesto que permite utilizar de la mejor manera todos los servicios de google: su asstente de voz, su interfaz de inteligencia artificial, sus servicios de autenticacion, su red privada de fibra optica que es de las mas rapidas y mayor cobertura, entre otros.
+
+En cuanto al costó, se utilizaron tecnologias de backend totalmente escalables tipo serverless para ajustar los gastos a unicamente los necesarios, teniendo en cuenta que las pruebas a gran escala estuvieron lejos del alcance de este proyecto, aún asi se desarrollo toda la arquitectura pensando en la necesidad de optimizar en la mayor medida los gastos. Teniendo en cuenta que no se hicieron bruebas a gran escala los servicios de backend fueron posibles gracias a las coutas gratuitas del mayorista utilizado para desplegar el servicio (Google)
+
+En cuanto al requerimiento de escalabilidad, la desicion de diseñar serverless juega el papel mas importante: Los servicios serverless le permitiran a la aplicacion permanecer funcional sin hacer ningun cambio inclusive si se tienen 4000 usuarios.
+
+Para comprender mejor el producto, se puede observar en la figura \ref{diagramaGeneralizado} un diagrama generalizado de los componentes de software del sistema, donde principalmente los desarrollos hacen parte de 3 grandes bloques: el bloque de la nube, el bloque del dispositivo embebido (Raspberry), y el bloque del dispositivo movil (Android).
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=14cm]{figuras/GeneralDiagram.png}
+	\caption{Diagrama generalizado de las estructuras de software}	
+	\label{diagramaGeneralizado}
+\end{figure}
+	
