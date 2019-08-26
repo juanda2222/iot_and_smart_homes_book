@@ -1,116 +1,117 @@
-\section{House Manager}
+\customsection{House Manager}
 
-Una vez descritos todos los componentes gráficos necesarios para realizar la aplicacion se desarrollaron todos los objetos necesarios para implementar los requerimientos descritos en la hoja "requerimientos funcionales" del formato RUP \ref{tab0}. La aplicacion fue desarrollada utilizando el paradigma MVC, para ello, se organizo el proyecto en 3 carpetas principalmente; view, control y model, donde todos los componentes y scripts son gestionados desde un archivo principal. Debido a la naturaleza grafica del proyecto y las limitaciones tecnicas del hardware raspberry, se utilizo Python 2.7 para garantizar la compatibilidad de la mayor cantidad de sistemas operativos y librerias. 
-Para el desarrollo de la aplicacion fueron utilizadas las siguientes librerias: 
+Una vez descritos todos los componentes gráficos necesarios para realizar la aplicación, se implementaron los objetos de modelo, vista y controlador, basándose en los requerimientos descritos en la hoja ``requerimientos funcionales'' del formato RUP \ref{tab0}. Para el desarrollo de estos componentes fueron necesarias diferentes condiciones técnicas que serán descritas en el siguiente apartado.
+
+\subsection{Especificaciones técnicas}
+
+La aplicación fue desarrollada utilizando el paradigma MVC, para ello, se organizo el proyecto en 3 carpetas: \textit{view, control y model}, donde todos los componentes y scripts son gestionados desde un archivo principal. Debido a la naturaleza gráfica del proyecto y las limitaciones técnicas del hardware raspberry, se utilizó Python 2.7 para garantizar la compatibilidad de la mayor cantidad de sistemas operativos y librerías. 
+Para el desarrollo de la aplicación fueron utilizadas las siguientes librerías:
+
 \begin{itemize}
-	\item paho-mqtt: Esta libreria se utilizó para establecer la comunicación con el broker de mqtt nativo de Google cloud iot.
-	\item numpy, scipy: Estas listrerias fueron utilizadas para facilitar el procesamiento de vectores y mejorar el tiempo de procesamiento de los mismos.
-	\item pyqtgraph: Fue utilizada para gestionar y renderizar las gráficas con un valor optimo de fotogramas por segundo
-	\item pyqtgraph: Fue utilizada para gestionar y renderizar las gráficas con un valor optimo de fotogramas por segundo
-	\item: http.client: Esta libreria fue utilizada para establecer una comunicacion basada en solicitudes http con un "endpoint" del backend
-	\item: pyjwt cryptography: Con esta libreria se desarrolló la etapa de encriptacion de datos adicional basada en Java Web Tokens.	
+	\item \textbf{Paho-mqtt:} Esta librería se utilizó para establecer la comunicación con el bróker de Mqtt nativo de “Google Cloud Iot”.
+	\item \textbf{Numpy, Scipy:} Estas listrerias fueron utilizadas para facilitar el procesamiento de vectores y mejorar el tiempo de procesamiento de los mismos.
+	\item \textbf{Pyqtgraph:} Fue utilizada para gestionar el renderizado de las gráficas con el mejor valor posible de fotogramas por segundo. La necesidad de optimizar el componente grafico fue de importancia puesto que se desarrollaría sobre una tarjeta de computación de propósito específico (Raspberry).
+	\item: \textbf{Http.client:} Esta librería fue utilizada para establecer una comunicación basada en solicitudes http con un ``endpoint'' del backend.
+	\item: \textbf{Pyjwt, Cryptography:} Con esta librería se desarrolló la etapa de encriptación de datos adicional basada en \textit{Java Web Tokens}.	
 \end{itemize}
 
-Dentro de la carpeta del proyecto se pueden encontrar scripts que fueron importantes para el despliegue de la aplicacion. Por ejemplo; en el directorio "./src/installing/" se encuentran los ejecutables para la instalacion de la aplicacion en windows y debian; en el directorio "./src/test/" se encuentran las rutinas de testing utilizadas para algunas rutinas y objetos utilizados en el programa.
-
-Pensando en la escalabilidad del sistema, se definio un espacio para las "aplicaciones" adicionales donde se pudieran incluir nuevas rutinas de adquisicion y control para dispositivos nuevos \ref{fig_6}. Como prueba de concepto se utilizo una rutina serial para adquirir el valor de khw acumulado en un contador electrico bifasico Inelca. Respecto a esta consideracion de diseño se hablara mas en proximos apartados
+Dentro de la carpeta del proyecto se pueden encontrar scripts que fueron importantes para el despliegue de la aplicación. Por ejemplo; en el directorio ``./src/installing/'' se encuentran los ejecutables para la instalación de la aplicación en Windows y Debian; en el directorio ``./src/test/'' se encuentran las rutinas de “testing” utilizadas para algunos scripts y objetos utilizados en el programa.
+\vspace{0.5cm}\\
+Pensando en la escalabilidad del sistema, se definió un espacio para las ``aplicaciones'' adicionales donde se pudieran incluir nuevas rutinas de adquisición y control para dispositivos nuevos \ref{fig_6}. Como prueba de concepto se utilizó una rutina serial para adquirir el valor de khw acumulado en un contador eléctrico bifásico Inelca. Respecto a esta consideración de diseño se hablará más en próximos apartados.
+\vspace{0.5cm}\\
 
 \begin{figure}[htbp]
 	\centerline{\includegraphics[width=8.5cm]{figuras/housemanager_newapp.png}}
-	\caption{Visualizacion de la escalabilidad del sistema con una app no desarrollada por completo}
+	\caption{Visualización de la escalabilidad del sistema con una app no desarrollada por completo. Fuente: propia}
 	\label{fig_6}
 \end{figure}
 
-En adicion, se diagramo la experiencia de usuario de tal forma que el control y la medicion de los dispositivos conectados a la tarjeta tuvieran el mismo "costo de interacción", es decir, que ambos estuvieran a la misma cantidad de clicks desde cualquier ventana del sistema. Por ende, todas las aplicaciones adicionadas en versiones futuras le seran mas faciles de asimilar al usuario.
+En adición, se diagramo la experiencia de usuario de tal forma que el control y la medición de los dispositivos conectados a la tarjeta tuvieran el mismo ``costo de interacción'', es decir, que ambos estuvieran a la misma cantidad de clicks desde cualquier ventana del sistema. Por ende, todas las aplicaciones adicionadas en versiones futuras serán más fáciles de asimilar para el usuario.
 
 \subsection{Requerimientos Funcionales}
 
-Durante la etapa de conceptualizacion del proyecto de ingeniería que este documento describe se utilizó una herramienta de planeación llamada RUP; con un documento llamado "Requerimientos funcionales", dentro de los requerimientos implementados descritos en ese documento estan: 
+Durante la etapa de conceptualización del proyecto de ingeniería que este documento describe se utilizó una herramienta de planeación llamada RUP; con un documento llamado ``Requerimientos funcionales'', dentro de los requerimientos implementados descritos en ese documento están: 
 
 \begin{figure}[htbp]
 	\centerline{\includegraphics[width=8.5cm]{figuras/housemanager_home.png}}
-	\caption{Escena del home del House Manager con barras de progresso para la indicacion dinamica}
+	\caption{Escena del home del House Manager con barras de progreso para la indicación dinámica. Fuente: propia}
 	\label{fig_7}
 \end{figure}
 
 \begin{enumerate}
-	\item \textsl{"El sistema debe mostrar graficamente la cantidad de agua y potencia consumida durante el dia contrastandolas con un valor maximo recomendado":} Para el desarrollo de esta funcionalidad se utilizó un componente grafico tipo barra de progreso donde su 100 porciento tenia como referencia la cantidad de agua recomendada para el numero de personas presentes en la vivienda\ref{fig_7}. El numero de personas presentes en la vivienda fue un dato ingresado manualmente por configuracion inicial (sobre el sistema de configuracion se hablara en los siguientes apartados de este capitulo)
+	\item \textsl{``El sistema debe mostrar gráficamente la cantidad de agua y potencia consumida durante el día contrastándolas con un valor máximo recomendado'':} Para el desarrollo de esta funcionalidad se utilizó un componente gráfico tipo barra de progreso donde su 100 por ciento tenía como referencia la cantidad de agua recomendada para el número de personas presentes en la vivienda\ref{fig_7}. El número de personas presentes en la vivienda fue un dato ingresado manualmente por configuración inicial (sobre el sistema de configuración se hablará en los siguientes apartados de este capítulo).
 	
-	\item \textsl{"Por defecto el uso de las cargas electricas más significativas debe programarse surante los picos de generacion en la casa, estos horarios podran ser modificados bajo una advertencia de uso no eficiente":} En miras de implementar esta funcionalidad se utilizo un elemento grafico tipo calendario para configurar de manera individual las ventanas de activación de las cargas electricas en la vivienda\ref{fig_8}. 
-	También, se consideró la opcion de activacion o desactivacion inmediata de los circuitos; para ello se, implementó una rutina flexible que permitio ignorar las cargas electricas que el usuario habia modificado manualmente (Esta rutina se nombro "Scheduler Handler"), lo anterior unicamente durante 24 horas para no afectar el objetivo de sostenibilidad de la vivienda. 
-	En adicion, se utilizo la conexion mqtt para accionar remotamente cualquiera de los circuitos localmente gestionados, en caso de recibir un mensaje de control para los circuitos el sistema tambien suspendiera por 24 horas la accion del "Schedule Handler".
+	\item \textsl{``Por defecto el uso de las cargas eléctricas más significativas debe programarse durante los picos de generación en la casa, estos horarios podrán ser modificados bajo una advertencia de uso no eficiente'':} En miras de implementar esta funcionalidad se utilizó un elemento gráfico tipo calendario para configurar de manera individual las ventanas de activación de las cargas eléctricas en la vivienda\ref{fig_8}.
+	\vspace{0.5cm}\\ 
+	También, se consideró la opción de activación o desactivación inmediata de los circuitos; para ello se, implementó una rutina flexible que permitió ignorar las cargas eléctricas que el usuario había modificado manualmente (Esta rutina se nombró ``Scheduler Handler''), lo anterior únicamente durante 24 horas para no afectar el objetivo de sostenibilidad de la vivienda. 
+	\vspace{0.5cm}\\
+	En adición, se utilizó la conexión Mqtt para accionar remotamente cualquiera de los circuitos localmente gestionados, en caso de recibir un mensaje de control para los circuitos el sistema también suspendiera por 24 horas la acción del ``Schedule Handler''.
 	
-	\item: \textsl{"El sistema debe poder comunicarse con una base de datos que represente todas las variables y el estado de los circuitos de la vivienda":} Para la implementacion de este requeirmiento se creo un "endpoint" en el servicio de backend con la capacidad de hacer consultas de historicos a la base de datos. La solución tiene este comportamiento puesto que la aplicacion del cliente finl no debe tener ningun tipo de credencial para el acceso a la informacion directmente, con una capa de procesamiento se pueden integrar este tipo de solicitudes con el mismo sistema de encriptacion del broker de mqtt (para más informacion de los endpoints y la rutina de encriptacion vease el capitulo "Backend").
+	\item: \textsl{``El sistema debe poder comunicarse con una base de datos que represente todas las variables y el estado de los circuitos de la vivienda'':} Para la implementación de este requerimiento se creo un ``endpoint'' en el servicio de backend con la capacidad de hacer consultas de históricos a la base de datos (Un ``endpoint'' es un url web gestionado por un backend en el cual se pueden realizar solicitudes Http). La solución tiene este comportamiento puesto que la aplicación del cliente final no debe tener ningún tipo de credencial para el acceso a la información directamente, con una capa de procesamiento se pueden integrar este tipo de solicitudes con el mismo sistema de encriptacion del broker de Mqtt (para más información de los endpoints y la rutina de encriptacion vease el capitulo \textit{backend}).
 \end{enumerate}
 
 
 \begin{figure}[htbp]
 	\centerline{\includegraphics[width=8.5cm]{figuras/housemanager_control.png}}
-	\caption{Escena de control del House Managern con sus calendarios}
+	\caption{Escena de control del House Managern con sus calendarios. Fuente: propia}
 	\label{fig_8}
 \end{figure}
 
 \subsection{Funciones adicionales}
 
-En adición a los requerimientos funcionales, se añadieron funciones a la conceptualización de diseño original para mejorar el funcionamiento de la plataforma y la experiencia de usuario. Dentro de estas funciones podemos encontrar la configuracion del sistema, la posibilidad de guardar localmente para no perder la informacion adquirida, etc. 
-Para comprender mejor estas funciones adicionales, seran descritas a continuacion:
+En adición a los requerimientos funcionales, se añadieron funciones a la conceptualización de diseño original para mejorar el funcionamiento de la plataforma y la experiencia de usuario. Dentro de estas funciones podemos encontrar la configuración del sistema, la posibilidad de guardar localmente para no perder la información adquirida, etc. Para comprender mejor estas funciones adicionales, serán descritas a continuación:
 
 
 \begin{enumerate}
-	\item \textbf{Handler remoto:} Esta caracteristica le permite al sistema cambiar de manera automatica entre el modo remoto y el modo local para no perder información en ningun momento de la adquisicion. En caso de la caida repentina de la red es capaz de cambiar al modo local sin la perdida de ningun dato. Tambien, es capaz de entender cuando el usuario desea que el dispositivo funcione permanentemente de manera local.
+	\item \textbf{Handler remoto:} Esta característica le permite al sistema cambiar de manera automática entre el modo remoto y el modo local para no perder información en ningún momento de la adquisición. En caso de la caída repentina de la red es capaz de cambiar al modo local sin la perdida de ningún dato. También, es capaz de entender cuando el usuario desea que el dispositivo funcione permanentemente de manera local.
 	
-	\item \textbf{Sistema de almacenamiento local:} Con esta caracteristica el House Manager puede almacenar todos los datos adquiridos en una hoja de excel generando archivos organizados por dias. Tambien es capaz de almacenar en un archivo diferentee los datos presentes en la gráfica en cuestion\ref{fig_9}.
-	
-	\item \textbf{Ajustes de configuracion} Esta es una caracteristica que incluye una ventana adicional donde se configuran los aspectos concernientes al sistema en general\ref{fig_10}. Los aspectos configurables del sistema son: La frecuencia en segundos con la que se reportan los datos al servidor, el costo del kilo watt hora, el costo del metro cubico de agua, el dia de notificacion del correo (ver funcion "Notificacion automatica"), el modo de funcionamiento (remoto o local) y el nombre de la ubicacion (este nombe es opcional y sirve para administrar los diferentes dispositivos).
-	
-	\item \textbf{Notificacion Automatica:} Para el correcto desarrollo de esta funcion se compró el dominio \href{www.alfagenos.com}{www.alfagenos.com} como remitente de las notifiacciones enviadas por correo, esta notificacion tendra lugar dependiendo de la configuracion establecida y notificara el gasto en pesos del consumo electrico y de agua hasta la fecha establecida en la configuracion.
+	\item \textbf{Sistema de almacenamiento local:} Con esta característica el House Manager puede almacenar todos los datos adquiridos en una hoja de Excel generando archivos organizados por días. También es capaz de almacenar en un archivo diferente los datos presentes en la gráficas teniendo en cuenta el día de adquisición. \ref{fig_9}.
+	\begin{figure}[htbp]
+		\centerline{\includegraphics[width=8.5cm]{figuras/housemanager_measure.png}}
+		\caption{Escena de medición del House Manager, con su respectivo panel para guardar los datos. Fuente: propia}
+		\label{fig_9}
+	\end{figure}
 
-	\item\textbf{Autenticación usando google:} Para desarrollar esta funcionalidad se utilizó la api de autenticacion de google y se creo una escena aparte para la visualizacion del usuario \ref{fig_11}.
+	\item \textbf{Ajustes de configuración} Esta es una característica que incluye una ventana adicional donde se configuran los aspectos concernientes al sistema en general\ref{fig_10}. Los aspectos configurables del sistema son: La frecuencia en segundos con la que se reportan los datos al servidor, el costo del kilo watt hora, el costo del metro cubico de agua, el día de notificación del correo (ver función ``Notificación automática''), el modo de funcionamiento (remoto o local) y el nombre de la ubicación (este nombre es opcional y sirve para administrar los diferentes dispositivos desde la perspectiva del backend).
+	\begin{figure}[htbp]
+		\centerline{\includegraphics[width=8.5cm]{figuras/housemanager_config.png}}
+		\caption{Escena de configuración del dispositivo House Manager. Fuente: propia}
+		\label{fig_10}
+	\end{figure}
+
+	\item \textbf{Notificación Automática:} Para el correcto desarrollo de esta función se compró el dominio \href{www.alfagenos.com}{www.alfagenos.com} para recibir las notificaciones desde el remitente de correo: notificaciones@alfagenos.com. Esta notificación tendrá lugar dependiendo de la configuración establecida e indicara el gasto en pesos del consumo eléctrico y de agua hasta la fecha establecida en la configuración. También notificará los gastos  energéticos en horarios adicionales al pre establecido por la configuración del Solar Decathlon.
 	
+	\item\textbf{Autenticación usando google:} Para desarrollar esta funcionalidad se utilizó la api de autenticación de google y se creo una escena aparte para la visualización del usuario \ref{fig_11}.
+	\begin{figure}[htbp]
+		\centerline{\includegraphics[width=8.5cm]{figuras/housemanager_user.png}}
+		\caption{Escena para el inicio de sesión del House Manager. Fuente: propia}
+		\label{fig_11}
+	\end{figure}
 	
-	\item \textbf{Doble nivel de encriptacion:} Debido a las exigencias de los servidores de google se implementaron 2 capas de seguridad de encriptacion para la  comunicacion de la aplicacion con el backend. La primera capa es de tipo TLS y opera para cuaquier producto de google, inclusive las operaciones realizadas por los navegadores. La segunda se implemento usando encriptacion "RS256" a travez de JWT.
+	\item \textbf{Doble nivel de encriptación:} Debido a las exigencias de los servidores de Google se implementaron 2 capas de seguridad de encriptación para la  comunicación de la aplicación con el backend. La primera capa es de tipo Tls y opera para cualquier producto de google, inclusive las operaciones realizadas por los navegadores. La segunda se desarrolló usando encriptación ``RS256'' a través de Jwt.
 \end{enumerate}
 
-\begin{figure}[htbp]
-	\centerline{\includegraphics[width=8.5cm]{figuras/housemanager_measure.png}}
-	\caption{Escena de medición del House Manager, con su respectivo panel para guardar los datos}
-	\label{fig_9}
-\end{figure}
- 
- \begin{figure}[htbp]
- 	\centerline{\includegraphics[width=8.5cm]{figuras/housemanager_config.png}}
- 	\caption{Escena de configuracion del dispositivo House Manager}
- 	\label{fig_10}
- \end{figure}
- 
- \begin{figure}[htbp]
- 	\centerline{\includegraphics[width=8.5cm]{figuras/housemanager_user.png}}
- 	\caption{Escena para el inicio de sesion del House Manager}
- 	\label{fig_11}
- \end{figure}
+\subsection{Algoritmos Utilizados}
 
- \subsection{Algoritmos Utilizados}
- 
- **** preambulo pra hablar de los algoritmos utilizados en esta aplicacion y como representan threads en python. Mencionar la estructura de su funcion (reciben como informacion un puntero a su pariente mayor que en la mayoria de los casos es uno de los 3 elementos: Modelo, Vista o Controlador, que ocurren en segundo plano, es decir que no tienen un comportamiento muy determinista en el tiempo de ejecucion, etc.
- 
- \subsubsection{Scheduler Handler}
- 
- ***incluir diagrama del algoritmo y explicarlo 
- 
-  \subsubsection{Remote Mode Handler}
- 
- ***incluir diagrama del algoritmo y explicarlo 
- 
-  \subsubsection{Mail Notification Handler}
- 
- ***incluir diagrama del algoritmo y explicarlo 
- 
-   \subsubsection{Data Report Handler}
- 
- ***incluir diagrama del algoritmo y explicarlo 
- 
-    \subsubsection{Indicator Handler}
- 
- ***incluir diagrama del algoritmo y explicarlo 
- 
+Los algoritmos utilizados en esta aplicación representan un hilo de programa en Python y comparten la información de toda la aplicación a través de los 3 objetos principales, el controlador la vista y el modelo. Estos algoritmos o programas ocurren en segundo plano y no representan una carga significativa para el CPU ni se comportan de manera determinista respecto a los tiempos de ejecución establecidos para los mismos.
+
+\subsubsection{Scheduler Handler}
+Este Hilo es el encargado de verificar y mantener el estado de los circuitos en el establecido en el horario de configuración. Este hilo de programa es capaz de discernir los circuitos que se han activado de manera manual desde la aplicación o desde la interfaz, con el objetivo de desactivar por 24 horas la influencia del calendario configurado.
+.
+\subsubsection{Remote Mode Handler}
+Este hilo de programa está encargado de verificar el estado de la conexión con el servidor para cambiar el modo de almacenamiento de la información, si es necesario. Si el dispositivo se desconecta, el sistema de almacenamiento cambia a la memoria local y si vuelve la conexión el handler es capaz de conectarse automáticamente al broker web para reportar los datos nuevamente, sin perdida de información.
+
+\subsubsection{Mail Notification Handler}
+
+Este hilo es el encargado de verificar la fecha y realizar las notificaciones correspondientes al consumo eléctrico, el consumo de agua y el indicador de sostenibilidad. También, lleva el registro del consumo generado por fuera de los horarios recomendados por el Solar Decathlon.
+
+\subsubsection{Data Report Handler}
+
+Esta rutina es la encargada de reportar automáticamente los valores medidos y almacenados en las gráficas, esta rutina almacena datos con una periodicidad que va desde  cada segundo hasta cada 5 minutos. Como aclaración, cada vez que se reportan los datos de las gráficas, no se toman en cuenta todos los datos intermedios, por ende hay una perdida para variables de medición con una granularidad mayor a 1 segundo.
+
+\subsubsection{Indicator Handler}
+
+Esta es la rutina que se encarga de monitorear el estado de consumo eléctrico y de agua para modificar los valores de los indicadores de la ventana de inicio. Así como también, calcular el valor del indicador de sostenibilidad utilizando exclusivamente en el consumo eléctrico y de agua.
+
+
  

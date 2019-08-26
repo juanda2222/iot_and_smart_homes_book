@@ -1,4 +1,7 @@
-% Principal Anteproy
+
+
+
+% Principal Proyecto de grado
 
 \include{secciones-ante/header}%este es de configuracion de la typografia general
 
@@ -7,16 +10,21 @@
 \usepackage{booktabs} %este es necesario para usar el exel2latex 
 
 \usepackage[utf8]{inputenc}%este es para poder tener tildes de una
+
+
 \usepackage{hyperref}
 \usepackage{graphicx}%libreria para insertar imagenes
 \hfuzz=.7pt %this one is used to ignore the half letther spceson paragraph problems
 
-%to remoove the default tittle of the bibliograpy import:
-\renewcommand{\bibname}{}
+\usepackage{xcolor} % para controlar de manera indeendiente el formato de los titulos
+\usepackage{titlesec} % para controlar de manera indeendiente el formato de los titulos
 
+\usepackage{fancyvrb} % con este el vomando verbatim para citar codigo acepta espacios tipo "tab"
 
 
 \begin{document}
+
+
 \pagestyle{empty}
 
 \include{secciones-ante/portada}
@@ -31,11 +39,20 @@
 \listoftables
 \newpage
 
-\renewcommand{\thepage}{\arabic{page}} \setcounter{page}{4}
+\renewcommand{\thepage}{\arabic{page}} \setcounter{page}{6}
 \pagestyle{fancy}%estilo de los demas apartados:
 
-\include{secciones-grado/introduccion}
+
+
+\newcommand{\customsection}[1]{\section[#1]{\centering #1}} % este es una funcion personalizada para centrar las secciones con \ssection
+
+
+\renewcommand{\tablename}{Tabla}
+
+\include{secciones-grado/resumen}
 \include{secciones-grado/marcoteo}
+\include{secciones-grado/introduccion}
+
 %\include{secciones-ante/problema}
 
 %\include{secciones-ante/objetivos}
@@ -50,19 +67,24 @@
 %\include{secciones-ante/cronograma}
 %\include{secciones-ante/presupuesto}
 
-\include{secciones-grado/api}
+\include{secciones-grado/api}	
 \include{secciones-grado/housemanager}
 \include{secciones-grado/backend}
 \include{secciones-grado/mobileapp}
+\include{secciones-grado/conclusiones}
 
 
 
 %-----------referencias------------------
-%\section{Referencias}
-
-\bibliography{bibliografia_anteproyecto_v1}
+%\usepackage[square,numbers,sort&compress]{natbib}
+\section*{\centering {Referencias}}
+\addcontentsline{toc}{section}{Referencias}
+\renewcommand{\section}[2]{} % this fill remove the automated tiitle from bibliograpphy command
 \nocite{*}
-\bibliographystyle{apalike} %iee
+%\bibliographystyle{ieeetr} %ieeetr or apalike IEEEtranN
+\bibliography{proyectodegrado}
+
+
 
 %-------------------------------------
 \end{document}

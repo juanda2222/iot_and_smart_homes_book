@@ -1,18 +1,15 @@
 \subsection{Contexto introductorio}
-No es para nadie una sorpresa que durante este siglo, las nuevas generaciones que nacen rodeadas de la tecnología, están cambiando las costumbres y el paradigma actual de lo que significa una vivienda, con una sociedad cada vez más relacionada con la tecnología, nuevos desafíos de diseño e implementación se plantean, en el sentido de cumplir las expectativas de estas nuevas generaciones.
+No es para nadie una sorpresa que durante este siglo, las nuevas generaciones que nacen rodeadas de la tecnología y están cambiando las costumbres y el paradigma actual de lo que significa una vivienda, con una sociedad cada vez más relacionada con la tecnología, nuevos desafíos de diseño e implementación se plantean para satisfacer las expectativas de las nuevas generaciones.
 \vspace{0.5cm}\\
-Básicamente el más importante beneficio utilizar la tecnología en viviendas comerciales es el proveer de servicios y facilidades a personas discapacitadas y ancianos [3], por otra parte, tenemos beneficios de monitorización y la capacidad de añadir herramientas que permitan la integración con redes eléctricas inteligentes. La popularidad de sistemas inteligentes ha venido incrementando debido al confort adicional, y herramientas de seguridad que pueden recibir los usuarios. 
+Básicamente el más importante beneficio utilizar la tecnología en viviendas comerciales es el proveer de servicios y facilidades a personas discapacitadas y ancianos \cite{GiralSala2016}, por otra parte, tenemos beneficios de monitorización y la capacidad de añadir herramientas que permitan la integración con redes eléctricas inteligentes. La popularidad de sistemas inteligentes ha venido incrementando debido al confort adicional, y herramientas de seguridad que pueden recibir los usuarios. 
 \vspace{0.5cm}\\
-Por lo tanto, hay ciertos factores que deben ser tenidos en cuenta a la hora de diseñar un sistema de control y monitoreo de la vivienda, En este documento se explicara el proceso de diseño e implementacion de un software para el manejo inteligente de una vivienda del Solar Decathlon Latinoamerica utilizando diferentes tecnologias de frontend y backend
+Por lo tanto, hay ciertos factores que deben ser tenidos en cuenta a la hora de diseñar un sistema de control y monitoreo de la vivienda, en este documento se explicará el proceso de diseño e implementación de un software para el manejo inteligente de una vivienda del Solar Decathlon Latinoamérica utilizando diferentes tecnologías de \textit{frontend} y \textit{backend}
 \vspace{0.5cm}\\
-La arquitectura desarrollada se puede describir en 3 productos: 
-
+La arquitectura desarrollada se puede describir en 3 productos:
+ 
 \begin{enumerate}
-	\item Un servicio de backend serverles basado en, un broker de mqtt, un servicio de almacenamiento de datos tipo S3, una base de datos relacional tipo mysql e interfaces http basadas en cloud functions. 
-	
-	\item Un programa encargado de administrar y controlar todas las rutinas de comunicacion, reporte y almacenamiento en el sitio de control con su respectiva interfaz de usuario.
-	
-	\item Una aplicacion celular capaz de monitorear y controlar los datos generados localmente y los actuadores de la vivienda del Solar Decathlon.
+	\item Un servicio de \textit{backend} serverless basado en: un broker de Mqtt, un servicio de almacenamiento de datos tipo S3, una base de datos relacional tipo MySql e interfaces http basadas en funciones de nube. 
+	\item Un programa encargado de administrar y controlar todas las rutinas de comunicación, reporte y almacenamiento en el sitio de control con su respectiva interfaz de usuario.
+	\item Una aplicación celular capaz de monitorear y controlar los datos generados localmente y los actuadores de la vivienda del Solar Decathlon.
 \end{enumerate}
-	
 

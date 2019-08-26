@@ -1,10 +1,23 @@
-\subsection{Resumen}
-En este documento se explicara el proceso realizado para implementar una arquitectura sofware para la comunicacion de diferentes dispositivos bajo el paradigma de internet de las cosas. El sistema consta principalmente de 3 productos: el producto del backend, una aplicacion movil y una aplicación de escritorio. La aplicacin movil se encargo de monitorear y controlar todos los dispositivos conectados al sistema´. El aplicativo en sitio se encargo de manejar los sensores y actuadores de manera local en caso de perdida de conexion, de manera remota en presencia de una red wifi y otras funciones adicionales. Por ultimo, el servicio del backend se encargo de comunicar ambos productos de frontend y almacenar la informacion de los usuarios.
+
+
+\section*{\centering {IMPLEMENTACI\'ON DE UN MANEJADOR DE RECURSOS CON INTELIGENCIA AMBIENTAL PARA UNA VIVIENDA DEL SOLAR DECATHLON LATIN AMERICA 2019}}
+\addcontentsline{toc}{section}{Resumen}
+
+En este documento se explicará el proceso realizado para implementar una arquitectura software, que comunique diferentes dispositivos bajo el paradigma de internet de las cosas. El sistema consta principalmente de 3 productos: el producto del backend, una aplicación móvil y una aplicación de escritorio. La aplicación móvil se encargó, a grandes rasgos, de monitorear y controlar de manera remota todos los dispositivos conectados al sistema. El aplicativo en sitio se encargó principalmente de manejar los sensores y actuadores de manera local, en caso de pérdida de conexión, y de manera remota en presencia de una red wifi. Por último, el servicio del backend se encargó de comunicar ambos productos de frontend y almacenar la información de los usuarios.
 \vspace{0.5cm}\\
-El producto del backend se implemento en el servicio de Google Cloud Services y utilizó los siguientes elementos para su funcionamiento: Un "Storage version 3 system" conectado a la red privada de Google para el almacenamiento de archivos, Una base de datos relacional MySql para el almacenamiento de datos de monitoreo y control de los dispositivos, Una lista de "cloud functions" activadas por solicitudes http y por ellas mismas que se comunican directamente con la base de datos y finalmente, un broker nativo de Google Cloud llamado "Cloud IOT" que recibe las conexiones de mqtt de los dispositivos del sistema.
+Teniendo en cuenta lo anterior, la arquitectura se diseñó bajo la posibilidad de soportar hasta 4000 dispositivos entre los cuales se encuentran computadores, celulares y cualquier dispositivo capaz de ejecutar rutinas en Python o Nodejs. Pero por el alcance del proyecto no se realizaron pruebas asociadas a esta característica.
+\begin{center}
+	\textsl{Palabras clave:} serverless, Json web token, comunicaciones móviles, comunicación industrial, control industrial, gestión de redes.
+\end{center}
+
+\newpage
+
+\section*{\centering {IMPLEMENTATION OF A RESOURCE MANAGER WITH ENVIRONMENTAL INTELLIGENCE FOR A SOLAR DECATHLON LATIN AMERICA 2019}}
+
+This document will explain the process carried out to implement a software architecture that communicates different devices under the internet of things paradigm. The system consists mainly of 3 products: the backend product, a mobile application and a desktop application. The mobile application was responsible, in a general manner, for monitoring and controlling remotely all devices connected to the system. The desktop application was mainly responsible for handling the sensors and actuators locally, in the case of a lost connection, and remotely in the presence of a Wi-Fi network. Finally, the backend service was responsible for communicating both frontend products and storing user information.
 \vspace{0.5cm}\\
-La aplicación movil desarrollada constó de principalmente de 3 escenas: la esccena de control, utilizada para el manejo de los actuadores disponibles desde el aplicativo en sitio, la escena de medicion, encargada de presentarle al usuario las mediciones adquiridas por el aplicativo en sitio en tiempo real y la escena principal, donde se puede observar un indicador del porcentaje de las variables mas relevantes respecto a un punto de referencia. Por ejemplo, el porcentaje de consumo de agua con respecto al promedio de consumo de agua en en un mes de un grupo familiar.
-\vspace{0.5cm}\\
-Por otra parte, el aplicativo en sitio se desarrollo usando python y se diseño para manejar un flujo de datos mas grandes y la posibilidad de funcionar desconectado de la red. La aplicacion le permitio al usuario programar rutinas de control de los circuitos a partir de horarios, visualizar los datos medidos, cambiar parametros de adquisicion como el tamaño del bufer y la frecuencia de muestreo, entre otros.
-\vspace{0.5cm}\\
-Finalmente la arquitectura se diseño bajo la posibilidad de soportar hasta 4000 dispositivos de alto trafico de datos entre los cuales se encuentran computadores, celulares y cualquier dispositivo capaz de ejecutar rutinas en python o nodejs. 
+Taking into account the above, the architecture was designed with the possibility of supporting up to 4000, including computers, cell phones and any device capable of executing routines in Python or Nodejs. But due to the scope of the project, no tests associated with this characteristic were performed.
+
+\begin{center}
+\textsl{Keywords:} serverless, Json web token, mobile comunication, industrial comunication, industrial control, computer network management
+\end{center}

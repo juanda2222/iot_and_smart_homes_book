@@ -2,25 +2,35 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: IEEEtranN.bst
 A level-1 auxiliary file: secciones-ante/portada.aux
 A level-1 auxiliary file: secciones-ante/contraportada.aux
+A level-1 auxiliary file: secciones-grado/resumen.aux
+A level-1 auxiliary file: secciones-grado/marcoteo.aux
 A level-1 auxiliary file: secciones-grado/introduccion.aux
-A level-1 auxiliary file: secciones-grado/marcoteorico.aux
 A level-1 auxiliary file: secciones-grado/api.aux
 A level-1 auxiliary file: secciones-grado/housemanager.aux
+A level-1 auxiliary file: secciones-grado/backend.aux
 A level-1 auxiliary file: secciones-grado/mobileapp.aux
-Illegal, another \bibstyle command---line 33 of file main.aux
- : \bibstyle
- :          {ieeetr}
-I'm skipping whatever remains of this command
-Database file #1: bibliografia_anteproyecto_v1.bib
-Warning--I didn't find a database entry for "Nosratabadi2017a"
-Warning--I didn't find a database entry for "Palizban2014"
-Warning--I didn't find a database entry for "Gaona2015"
+A level-1 auxiliary file: secciones-grado/conclusiones.aux
+Database file #1: proyectodegrado.bib
+Warning--entry type for "stackoverflow2017" isn't style-file defined
+--line 12 of file proyectodegrado.bib
+Warning--entry type for "jwtio" isn't style-file defined
+--line 19 of file proyectodegrado.bib
+Warning--entry type for "mysql" isn't style-file defined
+--line 25 of file proyectodegrado.bib
+A bad cross reference---entry "stackoverflow2017"
+refers to entry "https://insights.stackoverflow.com/survey/2017", which doesn't exist
+A bad cross reference---entry "jwtio"
+refers to entry "https://jwt.io", which doesn't exist
+A bad cross reference---entry "mysql"
+refers to entry "https://github.com/mysqljs/mysql", which doesn't exist
 -- IEEEtranN.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 ** Natbib version - not for normal IEEE work.
-Warning--empty journal in Rolando2014
+Warning--empty journal in Chacos
+Warning--empty year in Chacos
+Warning--missing publisher in Shovic2016
 Warning--missing institution in Herrera2015
 
 Done.
-(There was 1 error message)
+(There were 3 error messages)

@@ -1,84 +1,98 @@
-\section{Marco Teorico}
+\customsection{Marco Teórico}
 
-Para la optima comprension del proyecto de ingenieria explicado en este documento es necesario el entendimiento de diferentes conceptos, tecnologias o teorias. Estos conceptos seran explicados de manera breve en el transcurso de este capitulo, 
+Para la óptima comprensión de este proyecto de ingeniería es necesario el entendimiento de diferentes conceptos, tecnologías o teorías. Estos conceptos serán explicados de manera breve en el transcurso de este capítulo, 
 
 \subsection{Arquitectura.}
-Se define como un conjunto de componentes de software que operan en de manera relacionada y utilizan interfaces entre ellos. Los componentes de software utilizan un conjunto de herramientas de programación como APIs, Bibliotecas, Frameworks, para su óptimo diseño. Como aclaración las herramientas mencionadas anteriormente se definen como:
-
+Se define como un conjunto de componentes de software que operan en de manera relacionada y utilizan interfaces entre ellos. Los componentes de software utilizan un conjunto de herramientas de programación como APIs, Bibliotecas o Frameworks, para su óptimo diseño. Como aclaración las herramientas mencionadas anteriormente se definen como: 
 \begin{itemize}
-	\item \textbf{API (Application Programming Interface):} Es un conjunto de subrutinas, funciones y procedimientos (o métodos, en la programación orientada a objetos) que ofrece cierta biblioteca para ser utilizado por otro software como una capa de abstracción.
-    
-	\item \textbf{Framework:} En el marco de desarrollo de software, un Framework (entorno de trabajo) corresponde a la estructura  modular que sirve de base para la organización y desarrollo de software. Normalmente, pueden incluir soporte para lenguajes de programación, librerías, entre otras. 
+	\item \textbf{API (Application Programming Interface):} Es un conjunto de subrutinas, funciones y procedimientos (o métodos, en la programación orientada a objetos) que ofrece cierta lenguaje de programación para ser utilizado por otro software para eliminar capas de complejidad.
+	
+	\item \textbf{Framework:} En el marco de desarrollo de software, un Framework (entorno de trabajo) corresponde a la estructura  modular que sirve de base para la organización y desarrollo de software. Normalmente, pueden incluir soporte para diferentes lenguajes de programación, librerías, entre otras. 
 	\item \textbf{Biblioteca:} En programación, una biblioteca o librería es un conjunto de implementaciones funcionales, diseñadas en un lenguaje de programación específico, la cual ofrece una interfaz para la funcionalidad que se invoca.
 \end{itemize}
 
-La arquitectura de software que se implementó en este proyecto consta de 3 bloques importantes; un servicio en la nube, una aplicacion celular y una aplicacion de escrtorio. Estos a su vez utilizan herramientas, como las anteriormente descritas, para comunicar o relacionar elementos internamente.
+La arquitectura de software que se implementó en este proyecto consta de 3 bloques importantes; un servicio en la nube, una aplicación celular y una de escritorio. Estos a su vez utilizan herramientas, como las anteriormente descritas, para comunicar o relacionar elementos internamente.
 
+\subsection{Aplicación de escritorio.} 
 
-\subsection{Programacion orientada a objetos}
+Una aplicación de escritorio es cualquier software que pueda ser instalado en un computador o sistema de cómputo, y que permita ejecutar ciertas rutinas. En este sentido una aplicación web puede ser una aplicación de escritorio. Los lenguajes de programación de aplicaciones de escritorio son un conjunto más amplio, los que más predominan son aquellos basados en máquinas virtuales o entornos de ejecución puesto que permiten realizar desarrollos independientes del sistema operativo. Dentro de los más conocidos están los lenguajes: Java, Python, C++, Golang, etc.
+\vspace{0.5cm}\\
+Dentro de los elementos materiales del sistema se encuentran los dispositivos que van a encargarse de la capa física durante el proceso de comunicación y adquisición de datos, a continuación se definirán los componentes más importantes de estos componentes.
 
-**** describir muy bien la iteraccion shild parent en este paradigma de desarrollo puesto que se menciona mucho en el documento
+\subsection{Aplicación web.}
+
+Una aplicación web es un programa que se codifica en un lenguaje interpretable por los navegadores web, esto le permite a la aplicación ser independiente del sistema operativo y depender de interpretador web (navegador). Dentro de los lenguajes utilizados como desarrollo para aplicaciones web se tienen: HTML, JavaScript, Php, Asp, Python, Ruby, etc.
 
 \subsection{Servidor}
 
 Un módulo hardware y software con amplia capacidad de almacenamiento y procesamiento. Desde el punto de vista del software, los servidores son programas de computador que atienden las peticiones de otros programas llamados clientes. Dentro de estos llamados los principales servicios de un servidor son: compartir datos, información y recursos de hardware. Desde el punto de vista de hardware toda la información entrante de los dispositivos (clientes) es recibida a través de una interfaz de red y reconocida para su posterior procesamiento y almacenamiento.
-Desde una perspectiva mas simplista un servidor es un computador con especificaciones de hardware fijas como: ram, cpu, memoria intena, etc, enfocado unicamente en ofrecer los servicios anteriormente mencionados.
+Desde una perspectiva más simplista un servidor es un computador con especificaciones de hardware fijas como: RAM, CPU, memoria interna, etc, enfocado únicamente en ofrecer los servicios anteriormente mencionados.
 
+\subsection{Tcp y Tls}
 
-\subsection{TCP y TLS}
+Tcp (Transmision control protocol) es un protocolo de comunicación de la capa de aplicación que está orientado la conexión, y según James F. Kurase, ``Una conexión Tcp casi siempre es una conexión punto a punto, es decir, entre un único emisor y un único receptor''\cite{KuroseJ.F.&Ross2010}. Por otra parte el protocolo Tls  (Transport Layer Security) es una versión segura del protocolo Tcp y es una evolución del protocolo SSL (Secure Sockets Layer). Ambos protocolos son usados hoy en día por múltiples aplicaciones web, servicios bancarios y prácticamente cualquier cliente web. Sobre protocolos como estos se desarrollan las aplicaciones necesarias para crear servicios de programación de alto nivel como las interfaces con base de datos MySql y los servicios Http que utilizan las páginas web.
 
-** hablar del metodo de comunicacion sencillo de tcp (asegurar la recepcion) y su version encriptada Tls
-
-\subsection{JWT}
-
-*** explicar el funcionamiento del estandar de los json web token y los diferentes metodos de encriptacion.
+\subsection{Jwt}
+Un Jwt (Json web token) es un estándar abierto (RFC-7519) basado en Json (JavaScript object notation) para crear un token que sirvan para enviar datos entre aplicaciones o servicios y garantizar que sean válidos y seguros. La información contenida en los tokens debe ser la necesaria para garantizar estos servicios de autenticación y caducidad de los tokens.
+\vspace{0.5cm}\\
+Todo JWT debe contener una cabecera que identifique el algoritmo de encriptación y un cuerpo que contenga un objeto Json con información necesaria para procesar la validez del token. Los posibles algoritmos de encriptación y los campos que puede soportar un JWT, están definidos en el estándar que se puede revisar en su portal oficial \cite{jwtio}
 
 \subsection{Mqtt}
 
-*****Definir de manegra generalizada el protocolo mqtt
+El transporte de telemetría para mensajes usando cola (Mqtt de las siglas en inglés: Message Queue Telemetry Transport) fue diseñada por IBM en 1999 para comunicación "machine to machine", con el objetivo de proporcionar un protocolo de mensajería de publicación-suscripción con los requisitos mínimos de ancho de banda, el tamaño de la huella del código, el consumo de energía y los datos de las cabeceras en general \cite{Babovic2016}. Este protocolo de comunicación está desarrollado sobre la capa de comunicación de Tcp o Tls para su versión segura. 
+\vspace{0.5cm}\\
+El protocolo de comunicación Mqtt establece una comunicación bidireccional entre el broker y sus clientes. Un Bróker es un servidor que recibe todos los mensajes de los clientes y, en seguida, redirige estos mensajes a los clientes de destino relevantes; es decir, aquellos que estén suscritos a esa temática en especial. Un cliente es cualquier cosa que pueda interactuar con el bróker y recibir mensajes.
 
 \subsection{Http}
 
-*****Definir de manegra generalizada el protocolo http
-
+Http es un protocolo de comunicación síncrono, es decir, el cliente espera a que el servidor responda. Los navegadores web tienen este requisito, pero el costo es la baja escalabilidad. Lo anterior, debido a que el cliente debe hacer una solicitud cada vez que necesite hacer una operación. 
+\vspace{0.5cm}\\
+Http es un protocolo orientado a transacciones y sigue el esquema petición-respuesta entre un cliente y un servidor pero es unidireccional, es decir que el cliente necesita iniciar la conexión. En un aplicativo de IOT (internet of things), los dispositivos y sensores generalmente son clientes, lo que significa que no pueden recibir comandos de la red de forma pasiva.
+\vspace{0.5cm}\\
+Http es un protocolo de uno a uno. El cliente realiza una solicitud y el servidor responde. Es difícil y costoso transmitir un mensaje a todos los dispositivos en red, lo que es algo común en aplicaciones de Iot.
 
 \subsection{Serverless}
 
-**hablar del concepto de serverless teniendo en cuenta que ya se explico el conepto tradicional de servidor
+El concepto “serverless” define la capacidad de comprar una función como un servicio en el que el proveedor de la nube asume la responsabilidad de proporcionar un servidor y un entorno de ejecución bajo demanda para ejecutar el código.
+\vspace{0.5cm}\\
+Desde una perspectiva empresarial una empresa puede subcontratar todos los servicios asociados a los servidores y tener gastos únicamente por la cantidad de procesamiento, información o memoria RAM, utilizada. Como dijo Nate Taggart ``Con serverless, pueden externalizar la necesidad del conjunto de habilidades de orquestación. Deje que Amazon, Microsoft o Google manejen la capa de orquestación. Deje que su equipo se concentre en desarrollar aplicaciones y administrar el estado de las aplicaciones'' \cite{Bhatia2018}.
+\vspace{0.5cm}\\
+Para finalizar, existe una discusión activa sobre lo que significa ``serverless'', pero lo más acogido, es función como servicio [FaaS] y se funciona como un código que se desarrolla y se ejecuta bajo demanda en un proveedor de infraestructura especifico.
 
 \subsection{Backend}
 
-****misma historia para el backend dado que ya se hablo del servidor en su generalidad
-
-
-\subsection{Aplicación web.}
-
-Una aplicación web es un programa que se codifica en un lenguaje interpretable por los navegadores web, esto le permite a la aplicacion ser independiente del sistema operativo y depender de interpretador web (navegador). Dentro de los lenguajes utilizados como desarrollo para aplicaciones web se tienen: html, javascript, php, asp, python, ruby, etc. 
-
-\subsection{Aplicación de escritorio.} 
-
-Una aplicacion escritorio es cualquier software que pueda ser instalado en un computador o sistema de cómputo, y que permita ejecutar ciertas rutinas. En este sentido una aplicación web puede ser una aplicación de escritorio. Los lenguajes de programación de aplicaciones de escritorio son un conjunto más amplio, los que más predominan son aquellos basados en máquinas virtuales o entornos de ejecución puesto que permiten realizar desarrollos independientes del sistema operativo. Dentro de los más conocidos están los lenguajes: Java, Python, C++, Golang, etc.
+El backend es la parte del código de una aplicación que corre en un servidor, es decir, es la capa de acceso a los datos almacenados de una aplicación; además, contiene la lógica de la aplicación que maneja dichos datos. 
 \vspace{0.5cm}\\
-Dentro de los elementos materiales del sistema se encuentran los dispositivos que van a encargarse de la capa física durante el proceso de comunicación y adquisición de datos, a continuación se definirán los componentes más importantes de estos componentes.
+Los \textit{backend}s son los componentes funcionales de cualquier sistema orientado a servicios a través de protocolos estándar de Internet. Un \textit{backend} tiene la característica de ser independiente de la plataforma que hace uso de sus servicios y del lenguaje de programación de la misma \cite{Amelung2011}. Lo anterior tiene que ver con que toda la interfaz de comunicación de un \textit{backend} se desarrolla usando los protocolos estándar de internet.
+\vspace{0.5cm}\\
+Tradicionalmente el \textit{backend} se comunica con el servicio de almacenamiento de datos (Mysql, Mongo Db, file system, etc) y utiliza lenguajes de programación como Ruby, Java, Python, Node.js, ASP, etc. para cumplir su propósitos de operación.
 
 \subsection{Frontend}
 
-** describir el concepto de frontend teniendo en cuenta los dos conceptos anteriormente pencionados 
+El \textit{frontend}, a diferencia del \textit{backend}, es la parte de un aplicativo web que interactúa directamente con el usuario, por eso se dice que está del lado del cliente; es decir, desde el navegador o desde el dispositivo que utiliza el usuario final. En el \textit{frontend} se encuentran todas las tecnologías de diseño y desarrollo web que corren en el navegador y que se encargan de la interactividad con los usuarios; también pueden ser tecnologías de escritorio o móvil pero lo más común es encontrar el desarrollo de \textit{frontend} en la web.
 
 \subsection{Dispositivo}
 Un dispositivo es objeto hardware que puede ser visto como un sistema embebido con capacidades de procesamiento y comunicación a diferentes redes. En el dispositivo hardware reside el software que sirve como el manejador de las magnitudes físicas, voltajes, o sensores que están conectadas a él. Este componente normalmente posee las herramientas para el envío de información a servidores locales o remotos, en adición, dentro de los componentes que integran un dispositivo se tienen los siguientes:
 
 \begin{itemize}
 	\item \textbf{Sistema de archivos:} Este componente de software es el encargado de almacenar los datos del sistema ya sea localmente, en un servidor de manera remota. Además de lo anterior, este módulo sirve para el almacenamiento de la información necesaria para el funcionamiento del sistema operativo. 
-    
-	\item \textbf{Colector Cliente:} Este componente es el encargado de gestionar toda la información de los sensores que será enviada a manera de flujos de datos utilizando un protocolo de comunicación, esta capa de software añade los campos de metadata (control y gestión) para la efectiva comunicación.
-	\item \textbf{Capa de Sensores:} Este software es el encargado de proveer todos los drivers lógicos para la coneccion de los elementos físicos conectados al dispositivo.
+	
+	\item \textbf{Colector Cliente:} Este componente es el encargado de gestionar toda la información de los sensores que será enviada a manera de flujos de datos utilizando un protocolo de comunicación, esta capa de software añade las cabeceras y los formatos necesarias para la transmisión de datos.
+	\item \textbf{Capa de Sensores:} Este software es el encargado de proveer todos los drivers lógicos para la conexión de los elementos físicos conectados al dispositivo.
 \end{itemize}
+Debido al tiempo estipulado para el proyecto, el dispositivo y los métodos de adquisición no serán de alta importancia en el desarrollo de la arquitectura y se asumirá que todo desarrollo de los elementos de hardware debe estar solucionado junto con la comunicación con los mismos.
 
-Debido al tiempo estipulado para el proyecto el dispositivo y los métodos de adquisición no serán de alta importancia en el desarrollo de la arquitectura y se asumirá que todo desarrollo de los dispositivos debe tener solucionada la comunicación con el servidor.
+
+\subsection{Teoría de colores}
+
+Desde el punto de vista del desarrollo de diseño gráfico es necesario conocer los conceptos que facilitan la implementación de una apropiada interfaz HMI. Por ejemplo la teoría del color es un grupo de reglas básicas en la mezcla de colores para conseguir el efecto emocional deseado combinando colores de luz o pigmentos. Dentro de esta teoría existen varios modelos que explican este proceso: el modelo RGB, CYMK, YIQ, HSI etc.
 \vspace{0.5cm}\\
-Desde el punto de vista del desarrollo de diseño gráfico es necesario conocer los conceptos que facilitan la implementación de una apropiada interfaz HMI. Dentro del marco del diseño, los conceptos de mayor importancia para este proyecto son:
+Con el objetivo de comprender como se relacionan las emociones y los colores, se explicarán algunos términos comúnmente utilizados cuando se habla de colores y resultan necesarios para comprender el proceso de selección de la paleta de colores:
 
+\begin{itemize}
+	\item\textbf{Armonías de color:} Los colores armónicos son aquellos que funcionan bien juntos, es decir, que producen un esquema de color sensible al mismo sentido (la armonía nace de la percepción de los sentidos y, a la vez, esta armonía retro alimenta al sentido, haciéndolo lograr el máximo equilibrio que es hacer sentir tensión o relajación).
+	\item\textbf{Colores fríos:} En diseño, los colores fríos suelen usarse para dar sensación de tranquilidad, calma, seriedad y profesionalidad, también provocan la sensación de serenidad, recogimiento, la pasividad, el sentimentalismo, la sensación de frío. Como norma general son los colores que tienen azul y/o verde.
+	\item\textbf{Colores cálidos:} En diseño, los colores cálidos son aquellos que están asociados a una sensación de alta temperatura. Como norma general, los colores cálidos son todos aquellos que van del rojo al amarillo, pasando por naranjas, marrones y dorados.
+	\item\textbf{Colores complementarios:} Los colores complementarios son aquellos que se encuentran exactamente en el lugar opuesto del circulo cron ático del modelo HSB. Es decir que cualquier color tiene su complemento a 180 grados de su valor HUE.
 
-
-
+\end{itemize}
