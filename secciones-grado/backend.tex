@@ -1,24 +1,33 @@
 \customsection{Serverless backend}
 
-Durante el desarrollo del \textit{backend} se evaluó la posibilidad de utilizar las alternativas de nube más reconocidas y con mayor facturación en el mercado actual; Lo anterior con el objetivo de implementar el desarrollo con el proveedor más confiable. Dentro de los posibles proveedores se evaluaron superficialmente las siguientes opciones: Amazon Web Services, Google Cloud y Microsoft Azure. Con una primera mirada se pudo observar que los factores diferenciadores de cada proveedor dependian estrictamente de los productos adicionales que estos podian ofrecer.
+Durante el desarrollo del \textit{backend} se evaluó la posibilidad de utilizar las alternativas de nube más reconocidas y con mayor facturación en el mercado actual; Lo anterior con el objetivo de implementar el desarrollo con el proveedor más confiable. Dentro de los posibles proveedores se evaluaron las siguientes opciones: Amazon Web Services, Google Cloud y Microsoft Azure. Los anteriores proveedores fueron escogidos por el tamaño que tienen en la industria; una mirada de la reparticion del mercado actual se puede observar en la figura \ref{label}
+
+
+\begin{figure}[htbp]
+	\centerline{\includegraphics[width=12cm]{./figuras/market_share.jpg}}
+	\caption{Estadística de la repartición del mercado de servicios de nube en 2019. Fuente: \cite{cloudstadistics}}
+	\label{maket_stadistics}
+\end{figure}
+
+Teniendo en cuenta los tres proveedores mencionados anteriormente se pudo observar que los factores diferenciadores de cada uno, dependian estrictamente de los productos adicionales que estos ofrecían:
 \vspace{0.5cm}\\
-Por una parte, los servicios de nube de Amazon Web Services representan la mayoría del mercado de la nube, pero esto se debe en su mayoría al almacenamiento de información, por ende, tiene una gran variedad de servicios de nube, incluyendo sus tiendas en linea y sus servicios de storage webs. En resumen, su especialidad es el servicio de almacenamiento. Teniendo esto en mente, resulto una tentativa debido a la necesidad de nuestro proyecto de almacenar información de muchos dispositivos.
+Por una parte, los servicios de nube de Amazon Web Services representan la mayoría del mercado de la nube, pero esto se debe en su mayoría al almacenamiento de información, por ende, tiene una gran variedad de servicios de nube, incluyendo sus tiendas en linea y sus servicios de storage webs. En resumen, Amazon posee la mayor variedad de servicios de nube en la actualidad.
 \vspace{0.5cm}\\
-Por otra parte, los servicios de Google incluyen el uso de su red privada que tiene el mejor desempeño en velocidad dentro del mercado. En adición, los servicios de Google Cloud poseen interfaces de administración con más experiencia de usuario y la posibilidad de acceder a servicios clave para proyectos como este como el bróker serverless de IOT.
+Por otra parte, los servicios de Google incluyen el uso de su red privada que tiene el mejor desempeño en velocidad dentro del mercado. En adición, los servicios de Google Cloud poseen interfaces de administración con más experiencia de usuario y la posibilidad de integrar servicios de machine learning, big data y de procesamiento de audio.
 \vspace{0.5cm}\\
-Finalmente, Microsoft Azure es el servicio de nube con la posibilidad de integrarse de la mejor manera con desarrollos .Net, lo anterior debido a que es la tecnología de desarrollo creada y administrada por Microsoft.
+Finalmente, Microsoft Azure es el servicio de nube con la posibilidad de integrarse de manera optima con los servicios como  Windows Server, Office, .Net, entre otros. Por otra parte la documentacion entorno a los servicios de microsoft Azure no es tan completas como las de los dos competidores anteriormente mencionados.
 \vspace{0.5cm}\\
 Cabe aclarar que al escoger a cualquiera de estos proveedores no resulta comprometido el uso de los servicios de otros: para integrar servicios de otro proveedor, solo se requiere establecer las condiciones apropiadas para autenticar nodos de red diferentes a los de las redes internas que los proveedores ya administran.
 \vspace{0.5cm}\\
-Teniendo en cuenta todo lo anterior se escogió el servicio de nube de Google, principalmente porque poseía la implementación del bróker de Mqtt más apropiada para el desarrollo de un proyecto de estas características. Además, el servicio de Google permitiría utilizar herramientas propias como su interfaz de procesamiento de voz natural, en el momento que se extienda el alcance del proyecto.
+Teniendo en cuenta todo lo anterior, se escogió el servicio de nube de Google porque tiene los servicios de machine learning y de procesamiento de voz más avanzados. Por ende, aunque no se utilizan para esta version del proyecto, la integracion en futuros trabajos será más fluida. Además, debido a que el sistema operativo utilizado para probar la aplicacion celular es Android, la integracion de Google Cloud  y la ``User App'' será mas fácil.
 \vspace{0.5cm}\\
 Una vez escogida la plataforma de nube y el servicio de comunicación se decidió desarrollar el \textit{backend} tipo serverless para aprovechar todas las ventajas del servicio escalable de mensajes de internet de las cosas de Google llamado ``Cloud Iot''.
 
 \subsection{Especificaciones técnicas}
 
-Para el montaje de la arquitectura de la nube se utilizaron principalmente 4 componentes: la base de datos MySql, el servicio de almacenamiento por contenedores tipo ``Storage 3'' de Amazon, el servicio de Cloud IOT para como bróker de internet de las cosas y las ``Cloud Functions'' de su arquitectura de nube. De los elementos anteriormente mencionados se puede entender el sistema como una serie de funciones que son activadas con eventos tipo solicitudes Https y mensajes basados en Mqtts, por ende todo el flujo de información será orquestado por las funciones que se definan en el sistema. Un diagrama generalizado se puee ver en el capitulo de introducción en la figura \ref{diagramaGeneralizado}. 
+Para el montaje del modelo de la nube se utilizaron principalmente 4 componentes: la base de datos MySql, el servicio de almacenamiento por contenedores tipo ``Storage 3'' de Amazon, el servicio de Cloud IOT como bróker de internet de las cosas y las ``Cloud Functions'' del servicio de servidores de Google. De los elementos anteriormente mencionados se puede entender el backend como una serie de funciones que son activadas con eventos tipo solicitudes Https y mensajes basados en Mqtts, por ende todo el flujo de información será orquestado por las funciones que se definan en el sistema. El flujo de la información se puede observar más adelante en la sección ``funciones de nube''. Adicionalmente, Un diagrama generalizado de los componentes del \textit{backend}, se puede ver en el capitulo de diseño en la figura \ref{diagramaGeneralizado}. 
 \vspace{0.5cm}\\
-Las funciones de nube de Google operan como scripts de lenguajes de programación como Node.js, Python y Golang; estas requieren de librerías para operar de manera efectiva con cualquier componente del sistema. Para el desarrollo de esta arquitectura se decidió utilizar el entorno de desarrollo de Node.js, Por ende para poder hacer uso de los componentes necesarios para implementar la arquitectura planeada se utilizaron las siguientes librerías:
+Las funciones de nube de Google operan como scripts de lenguajes de programación como Node.js, Python y Golang; estas requieren de librerías para operar de manera efectiva con cualquier componente del sistema. Para el desarrollo de este modelo se decidió utilizar el entorno de desarrollo de Node.js, puesto que era un lenguaje de programación familiar y de alto nivel. Teniendo en cuenta lo anterior, para poder hacer uso de los componentes necesarios para implementar el sistema diseñado se utilizaron las siguientes librerías:
 
 \begin{itemize}
 	
@@ -37,27 +46,27 @@ Las funciones de nube de Google operan como scripts de lenguajes de programació
 
 \subsection{Base de datos relacional y no relacional}
 
-Una parte muy importante de la arquitectura es la base de datos y, aunque el sistema de almacenamiento de ``Cloud Storage'' funciona como un disco duro con todas las facilidades para majear archivos naturales, tiene limitaciones y costos asociados al número de operaciones de lectura y escritura que se pueden hacer en el mes. Por el contrario, la base de datos MySql tiene costos asociados únicamente con el tamaño del almacenamiento y la capacidad del procesador; debido a esto es la opción más apropiada para almacenar datos de pequeño tamaño pero de gran cantidad es la base de datos relacional MySql.
+Una parte muy importante del \textit{backend} es la base de datos y, aunque el sistema de almacenamiento de ``Cloud Storage'' funciona como un disco duro con todas las facilidades para majear archivos naturales, tiene limitaciones y costos asociados al número de operaciones de lectura y escritura que se pueden hacer en el mes. Por el contrario, la base de datos MySql tiene costos asociados únicamente con el tamaño del almacenamiento y la capacidad del procesador; debido a esto es la opción más apropiada para almacenar datos de pequeño tamaño pero de gran cantidad.
 \vspace{0.5cm}\\
 El diseño de la base de datos estuvo apoyado por el programa de administración de bases de datos: \textsl{``MySql Workbench''}. Un esquema generalizado de la base de datos se puede observar en el diagrama \ref{fig_23}, donde cada cuadro representa un grupo de tablas bajo el paradigma SQL. 
 \vspace{0.5cm}\\
 
 \begin{figure}[htbp]
-	\centerline{\includegraphics[width=14cm]{figuras/UML.png}}
-	\caption{Diseño de las tablas de la base de datos relacional MySql. Fuente: propia}
+	\centerline{\includegraphics[width=15cm]{figuras/UML.png}}
+	\caption{Diagrama general de la base de datos relacional MySql. Fuente: propia}
 	\label{fig_23}
 \end{figure}
 
-Teniendo en cuenta lo anterior, se explicará por separado cada grupo de tablas con el objetivo de mostrar las escalabilidad del sistema y como fue implementada la base de datos pensando en los requerimientos funcionales de los productos House Manger y User App. cabe aclarar que para representar los tipos de columnas se utilizaron los siguientes símbolos: un bombillo amarillo significa que se trata de una columna de llave primaria única, un rombo azul representa un buffer de tipo \textit{char} obligatorio, un rombo blanco significa buffer de tipo \textit{char} no obligatorio y las columnas sin símbolo son llaves secundarias de relación obligatorias.
+Teniendo en cuenta lo anterior, se explicará por separado cada grupo de tablas con el objetivo de mostrar las escalabilidad del sistema y como fue implementada la base de datos pensando en los requerimientos funcionales de los productos House Manger y User App. cabe aclarar que para representar los tipos de campos se utilizaron los siguientes símbolos: un bombillo amarillo significa que se trata de una columna de llave primaria única, un rombo azul representa un buffer de tipo \textit{char} obligatorio, un rombo blanco significa buffer de tipo \textit{char} no obligatorio y los campos sin símbolo son llaves secundarias de relación obligatorias.
 
 
 \begin{itemize}
 	
-	\item \textbf{Users data:} En este grupo de tablas se encuentran principalmente 2 tablas:
+	\item \textbf{Users data:} Figura \ref{fig_25}. En este grupo de tablas se encuentran principalmente 2 tablas:
 	\vspace{0.5cm}\\
-	La tabla registered\_users, que almacena la información de los clientes; esta información consta de un correo de registro y un espacio para la ``contraseña''. Realmente el espacio de la contraseña es una entrada para una ``llave privada'' generada por Google que se utiliza para acceder a la información personal de los usuarios desde el \textit{backend}. 
+	La tabla registered\_users, que almacena la información de los clientes; esta información consta de un correo de registro y un espacio para la ``contraseña''. Realmente el espacio de la contraseña es una entrada para una ``llave privada'' generada por Google que se utiliza para acceder a la información personal de los usuarios desde el \textit{backend}.
 	\vspace{0.5cm}\\
-	La tabla managment\_centers, que agrupa los dispositivos fabricados en regiones de operación; en esta tabla se tiene como objetivo referenciar a los usuarios y los dispositivos a una zona horaria GTM y una descripción de dirección. En el caso de realiza envíos o referenciar espacios geográficos esta tabla presenta una utilidad más representativa.
+	La tabla managment\_centers, que agrupa los dispositivos fabricados en regiones de operación; en esta tabla se tiene como objetivo referenciar a los usuarios y los dispositivos a una zona horaria GTM y una descripción de dirección. Esta tabla presenta una utilidad representativa en el caso de realizar envíos o referenciar espacios geográficos en los cuales se encuentran los dispositivos.
 	\vspace{0.5cm}\\
 	Finalmente, Las tablas adicionales son las tablas de relación muchos a muchos de un paradigma SQL relacional.
 	
@@ -67,7 +76,7 @@ Teniendo en cuenta lo anterior, se explicará por separado cada grupo de tablas 
 		\label{fig_25}
 	\end{figure}
 	
-	\item \textbf{Device\_info:} En este grupo existen 3 tablas y todas contienen información relevante: La tabla devices\_manufatured contiene principalmente el número serial. La tabla device\_type contiene una breve descripción del dispositivo y su nombre. Por último, la tabla  data\_type sirve para almacenar la información de todas las posibles variables medibles y los actuadores configurables para todos los dispositivos. Teniendo en cuenta que el sistema puede recibir dispositivos que no han sido fabricados de manera propia, juntando el nombre y el numero serial, se obtiene una identificación única por sensor o actuador conectado al sistema. 
+	\item \textbf{Device\_info:} Figura \ref{fig_26}. En este grupo existen 3 tablas y todas contienen información relevante: La tabla devices\_manufatured contiene principalmente el número serial de un dispositivo para identificarlo a los ojos del fabricante. La tabla device\_type contiene una breve descripción del dispositivo y su nombre. Por último, la tabla  data\_type sirve para almacenar la información de todas las posibles variables medibles y los actuadores configurables para todos los dispositivos, este ultimo campo es para garantizar que el sistema pueda explicarse por si mismo con una simple consulta. Teniendo en cuenta que el sistema puede recibir dispositivos que no han sido fabricados de manera propia, juntando el nombre y el numero serial, se obtiene una identificación única por sensor o actuador conectado al sistema. 
 	
 	\begin{figure}[htbp]
 		\centerline{\includegraphics[width=7cm]{figuras/device_info.png}}
@@ -75,7 +84,7 @@ Teniendo en cuenta lo anterior, se explicará por separado cada grupo de tablas 
 		\label{fig_26}
 	\end{figure}
 	
-	\item \textbf{Device\_data:} El grupo de tablas de información se compone únicamente de 2; la tabla measured\_data contiene únicamente la información que fue medida y tiene una estampa de tiempo de mínimo 1 segundo, la tabla controllable\_data contiene las estampas de tiempo en las cuales se le dio la orden al dispositivo modificar su actuador de forma específica. Teniendo en cuenta lo anterior, un valor de control en un momento especifico no garantiza que ese actuador se haya modificado de esa forma en el centro de gestión; garantiza que el dispositivo estaba conectado a la red y recibió el comando de hacerlo.
+	\item \textbf{Device\_data:} Figura \ref{fig_27}. El grupo de tablas de información se compone únicamente de 2; la tabla measured\_data contiene la información que fue medida y tiene una estampa de tiempo de mínimo 1 segundo, la tabla controllable\_data contiene las estampas de tiempo en las cuales se le dio la orden al dispositivo modificar su actuador de forma específica. Teniendo en cuenta lo anterior, un valor de control en un momento especifico no garantiza que ese actuador se haya modificado de esa forma en el centro de gestión; garantiza que el dispositivo estaba conectado a la red y recibió el comando de hacerlo.
 	
 	\begin{figure}[htbp]
 		\centerline{\includegraphics[width=7cm]{figuras/device_data.png}}
@@ -87,7 +96,7 @@ Teniendo en cuenta lo anterior, se explicará por separado cada grupo de tablas 
 
 Finalmente el componente no relacional del sistema de almacenamiento tipo ``Storage 3'' funciona como un sistema de archivos y tiene como interfaz la api propia de google anteriormente mostrada. Internamente para almacenar la información de los usuarios se organizó la información en carpetas con el nombre ``sql\_uid{id mysql}'' donde el texto ``{id mysql}'' corresponde a la llave primaria única entera utilizada para identificar a los usuarios en la base de datos relacional (la columna llamada ``id\_registered\_users'' de la tabla ``registered\_users'')
 \vspace{0.5cm}\\
-Teniendo en cuenta la estructura de almacenamiento anteriormente mencionada, el sistema obtiene su cuello de botella en el número de conexiones MySql que puede recibir, todos los demás elementos pueden escalar, en teoría, de manera infinita. Para la versión de la base de datos que se está utilizando se pueden permitir 4000 conexiones simultaneas, por ende, se dice que el sistema está diseñado para 4000 usuarios.
+Teniendo en cuenta la estructura de almacenamiento anteriormente mencionada, el sistema obtiene su cuello de botella en el número de conexiones MySql que puede recibir, todos los demás elementos pueden escalar, en teoría, de manera infinita. Para la versión de la base de datos que se está utilizando se pueden permitir 4000 conexiones simultaneas, por ende, se dice que el sistema está diseñado para 4000 dispositivos.
 
 \subsection{Relación de requerimientos funcionales}
 
@@ -100,9 +109,10 @@ Debido a que este producto no se contempló en la estaba de conceptualización y
 
 
 \subsection{Funciones de nube}
-Las funciones de nube implementadas tienen como características: una memoria ram de 512 megabytes, la posibilidad de tener acceso a una memoria volátil temporal únicamente existente durante el tiempo de ejecución de la función y la posibilidad de ejecutar los lenguajes de programación: Node.js, Python y Go. Cabe aclarar que este tipo de arquitectura posee como limitación un límite de ejecución por función de 9 minutos.
+Una función de nube es una rutina de código que se ejecuta cada vez que se realiza una solicitud Https o se recibe un mensaje directamente desde Google (como es en el caso del broker de IOT; ver figura \ref{diagramaGeneralizado} para ver bloques funcionales del \textit{backend}) y esta función puede retornar un mensaje en formato de texto si asi lo desea.
+Teniendo en cuenta lo anterior, las funciones de nube implementadas en este sistema tienen como características: una memoria ram de 512 megabytes, la posibilidad de tener acceso a una memoria volátil temporal únicamente existente durante el tiempo de ejecución de la función y la posibilidad de ejecutar los lenguajes de programación: Node.js, Python y Go. Cabe aclarar que este tipo de arquitectura posee como limitación un límite de ejecución por función de 9 minutos. Las anteriores características fueron configuradas directamente en la plataforma de Google y se encuentran dentro de los valores gratuitos del servicio.
 \vspace{0.5cm}\\
-Teniendo en cuenta lo anterior y los requerimientos funcionales se implementaron 4 funciones de nube que serán explicadas en los siguientes apartados.
+Teniendo en cuenta lo anterior, se implementaron 4 funciones de nube que le permitieron al sistema cumplir con los requerimientos funcionales. Estos cada una de las funciones serán explicadas en los siguientes apartados.
 
 \subsubsection{Get\_historical\_data:}
 
@@ -201,7 +211,7 @@ El campo message contiene el mensaje que recibirá el dispositivo, teniendo en c
 \end{Verbatim}
 Como se puede observar anteriormente, los campos de "data", "date" y "time" contienen un vector, lo que le permite a esta función realizar múltiples operaciones SQL y modificar múltiples actuadores con una sola solicitud.
 \vspace{0.5cm}\\
-El resultado de esta operación es un objeto tipo Json con la información de la operación SQL, es decir, información como el número de columnas afectadas, el tiempo que tomo la operación, entre otros. Para más información de este objeto se puede revisar la documentación oficial de la librería de mysql \cite{mysql}.
+El resultado de esta operación es un objeto tipo Json con la información de la operación SQL, es decir, información como el número de filas afectadas, el tiempo que tomo la operación, entre otros. Para más información de este objeto se puede revisar la documentación oficial de la librería de mysql \cite{mysql}.
 \vspace{0.5cm}\\
 Adicionalmente, un diagrama generalizado del algoritmo se puede ver en la figura \ref{fig_29}. Teniendo en cuenta esta figura el algoritmo de la función se puede dividir en 6 pasos:
 
@@ -264,7 +274,7 @@ Esta función comparte todos sus pasos con la anterior, es decir que es muy pare
 	\label{fig_31}
 \end{figure}
 
-En adición, la función debe recibir un Json con el mismo formato que el recibido por ``iot\_gateway\_control'' con diferencias en sus campos: ``data\_type'' y ``mqtt\_sub\_folder'', puesto que en el tipo de dato debe contener el identificador de la variable de control y en mqtt\_sub\_folder debe haber un Sting que identifique el tópico Mqtt que el dispositivo destino pueda reconocer como un mensaje de control. 
+Adicionalmente, la función debe recibir un Json con el mismo formato que el recibido por ``iot\_gateway\_control'' con diferencias en sus campos: ``data\_type'' y ``mqtt\_sub\_folder'', puesto que en el tipo de dato debe contener el identificador de la variable de control y en mqtt\_sub\_folder debe haber un Sting que identifique el tópico Mqtt que el dispositivo destino pueda reconocer como un mensaje de control. 
 \vspace{0.5cm}\\
-Para efectos prácticos, en esta etapa de la implementación, con el objetivo de discernir un tipo de mensaje de otro se escogió como formato de tema: ``{nombre}/control'', donde {nombre} es el nombre del dispositivo al cual se le desea enviar el mensaje. Con esto, no se quiere decir que el tema Mqtt esté ligado a este formato, en el caso que se deseen escalar los comandos y añadir más actuadores a un dispositivo ya diseñado, se puede modificar el sistema de temáticas propuesto para esta versión de los productos  \textit{backend}.
+Para efectos prácticos, en esta etapa de la implementación, con el objetivo de discernir un tipo de mensaje de otro se escogió como formato de tema: ``{nombre}/control'', donde {nombre} es el nombre del dispositivo al cual se le desea enviar el mensaje. Con esto, no se quiere decir que el tema Mqtt esté ligado a este formato, en el caso que se deseen escalar los comandos y añadir más actuadores a un dispositivo ya diseñado, se puede modificar el sistema de temáticas propuesto para esta versión de los productos \textit{backend}.
 

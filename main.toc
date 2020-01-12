@@ -6,50 +6,55 @@
 \contentsline {subsection}{\numberline {1.3}Aplicaci\IeC {\'o}n web.}{9}{subsection.1.3}% 
 \contentsline {subsection}{\numberline {1.4}Servidor}{9}{subsection.1.4}% 
 \contentsline {subsection}{\numberline {1.5}Tcp y Tls}{9}{subsection.1.5}% 
-\contentsline {subsection}{\numberline {1.6}Jwt}{9}{subsection.1.6}% 
+\contentsline {subsection}{\numberline {1.6}Jwt}{10}{subsection.1.6}% 
 \contentsline {subsection}{\numberline {1.7}Mqtt}{10}{subsection.1.7}% 
 \contentsline {subsection}{\numberline {1.8}Http}{10}{subsection.1.8}% 
 \contentsline {subsection}{\numberline {1.9}Serverless}{11}{subsection.1.9}% 
 \contentsline {subsection}{\numberline {1.10}Backend}{11}{subsection.1.10}% 
-\contentsline {subsection}{\numberline {1.11}Frontend}{11}{subsection.1.11}% 
+\contentsline {subsection}{\numberline {1.11}Frontend}{12}{subsection.1.11}% 
 \contentsline {subsection}{\numberline {1.12}Dispositivo}{12}{subsection.1.12}% 
 \contentsline {subsection}{\numberline {1.13}Teor\IeC {\'\i }a de colores}{12}{subsection.1.13}% 
 \contentsline {section}{\numberline {2}Introducci\IeC {\'o}n}{14}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}Contexto introductorio}{14}{subsection.2.1}% 
 \contentsline {subsection}{\numberline {2.2}Lineamientos de desarrollo}{14}{subsection.2.2}% 
-\contentsline {subsection}{\numberline {2.3}Dise\IeC {\~n}o Generalizado}{16}{subsection.2.3}% 
-\contentsline {section}{\numberline {3}Api de animaci\IeC {\'o}n}{19}{section.3}% 
-\contentsline {subsection}{\numberline {3.1}Investigaci\IeC {\'o}n y conceptualizaci\IeC {\'o}n}{19}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}Api de java}{20}{subsection.3.2}% 
-\contentsline {subsection}{\numberline {3.3}Api de Python y Qt}{24}{subsection.3.3}% 
-\contentsline {section}{\numberline {4}House Manager}{27}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Especificaciones t\IeC {\'e}cnicas}{27}{subsection.4.1}% 
-\contentsline {subsection}{\numberline {4.2}Requerimientos Funcionales}{28}{subsection.4.2}% 
-\contentsline {subsection}{\numberline {4.3}Funciones adicionales}{30}{subsection.4.3}% 
-\contentsline {subsection}{\numberline {4.4}Algoritmos Utilizados}{32}{subsection.4.4}% 
-\contentsline {subsubsection}{\numberline {4.4.1}Scheduler Handler}{33}{subsubsection.4.4.1}% 
-\contentsline {subsubsection}{\numberline {4.4.2}Remote Mode Handler}{33}{subsubsection.4.4.2}% 
-\contentsline {subsubsection}{\numberline {4.4.3}Mail Notification Handler}{33}{subsubsection.4.4.3}% 
-\contentsline {subsubsection}{\numberline {4.4.4}Data Report Handler}{33}{subsubsection.4.4.4}% 
-\contentsline {subsubsection}{\numberline {4.4.5}Indicator Handler}{33}{subsubsection.4.4.5}% 
-\contentsline {section}{\numberline {5}Serverless backend}{34}{section.5}% 
-\contentsline {subsection}{\numberline {5.1}Especificaciones t\IeC {\'e}cnicas}{35}{subsection.5.1}% 
-\contentsline {subsection}{\numberline {5.2}Base de datos relacional y no relacional}{35}{subsection.5.2}% 
-\contentsline {subsection}{\numberline {5.3}Relaci\IeC {\'o}n de requerimientos funcionales}{39}{subsection.5.3}% 
-\contentsline {subsection}{\numberline {5.4}Funciones de nube}{40}{subsection.5.4}% 
-\contentsline {subsubsection}{\numberline {5.4.1}Get\_historical\_data:}{40}{subsubsection.5.4.1}% 
-\contentsline {subsubsection}{\numberline {5.4.2}Send\_command:}{43}{subsubsection.5.4.2}% 
-\contentsline {subsubsection}{\numberline {5.4.3}IOT\_gateway\_control:}{46}{subsubsection.5.4.3}% 
-\contentsline {subsubsection}{\numberline {5.4.4}IOT\_gateway\_measure:}{47}{subsubsection.5.4.4}% 
-\contentsline {section}{\numberline {6}User app}{49}{section.6}% 
-\contentsline {subsection}{\numberline {6.1}Especificaciones t\IeC {\'e}cnicas}{49}{subsection.6.1}% 
-\contentsline {subsection}{\numberline {6.2}Requerimientos Funcionales}{52}{subsection.6.2}% 
-\contentsline {subsection}{\numberline {6.3}Funciones adicionales}{55}{subsection.6.3}% 
-\contentsline {subsection}{\numberline {6.4}Pruebas de concepto}{57}{subsection.6.4}% 
-\contentsline {section}{\numberline {7}Conclusiones y Trabajos futuros}{59}{section.7}% 
-\contentsline {subsection}{\numberline {7.1}Conclusiones}{59}{subsection.7.1}% 
-\contentsline {subsection}{\numberline {7.2}Trabajos futuros.}{60}{subsection.7.2}% 
-\contentsline {subsubsection}{\numberline {7.2.1}Pruebas con m\IeC {\'a}s dispositivos.}{60}{subsubsection.7.2.1}% 
-\contentsline {subsubsection}{\numberline {7.2.2}Integraci\IeC {\'o}n de sensores y actuadores al sistema.}{60}{subsubsection.7.2.2}% 
-\contentsline {subsubsection}{\numberline {7.2.3}Interacci\IeC {\'o}n con la interfaz de voz de Google usando ``Dialog flow''.}{60}{subsubsection.7.2.3}% 
-\contentsline {section}{Referencias}{61}{subsubsection.7.2.3}% 
+\contentsline {section}{\numberline {3}Dise\IeC {\~n}o del sistema}{17}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Dise\IeC {\~n}o conceptual}{17}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}Dise\IeC {\~n}o final}{17}{subsection.3.2}% 
+\contentsline {section}{\numberline {4}Api de animaci\IeC {\'o}n}{23}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Investigaci\IeC {\'o}n y conceptualizaci\IeC {\'o}n}{23}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Api de java}{24}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.3}Api de Python y Qt}{29}{subsection.4.3}% 
+\contentsline {section}{\numberline {5}House Manager}{32}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Especificaciones t\IeC {\'e}cnicas}{32}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Requerimientos Funcionales}{33}{subsection.5.2}% 
+\contentsline {subsection}{\numberline {5.3}Funciones adicionales}{35}{subsection.5.3}% 
+\contentsline {subsection}{\numberline {5.4}Algoritmos Utilizados}{37}{subsection.5.4}% 
+\contentsline {subsubsection}{\numberline {5.4.1}Scheduler Handler}{38}{subsubsection.5.4.1}% 
+\contentsline {subsubsection}{\numberline {5.4.2}Remote Mode Handler}{38}{subsubsection.5.4.2}% 
+\contentsline {subsubsection}{\numberline {5.4.3}Mail Notification Handler}{38}{subsubsection.5.4.3}% 
+\contentsline {subsubsection}{\numberline {5.4.4}Data Report Handler}{38}{subsubsection.5.4.4}% 
+\contentsline {subsubsection}{\numberline {5.4.5}Indicator Handler}{38}{subsubsection.5.4.5}% 
+\contentsline {section}{\numberline {6}Serverless backend}{40}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}Especificaciones t\IeC {\'e}cnicas}{41}{subsection.6.1}% 
+\contentsline {subsection}{\numberline {6.2}Base de datos relacional y no relacional}{42}{subsection.6.2}% 
+\contentsline {subsection}{\numberline {6.3}Relaci\IeC {\'o}n de requerimientos funcionales}{46}{subsection.6.3}% 
+\contentsline {subsection}{\numberline {6.4}Funciones de nube}{47}{subsection.6.4}% 
+\contentsline {subsubsection}{\numberline {6.4.1}Get\_historical\_data:}{47}{subsubsection.6.4.1}% 
+\contentsline {subsubsection}{\numberline {6.4.2}Send\_command:}{50}{subsubsection.6.4.2}% 
+\contentsline {subsubsection}{\numberline {6.4.3}IOT\_gateway\_control:}{53}{subsubsection.6.4.3}% 
+\contentsline {subsubsection}{\numberline {6.4.4}IOT\_gateway\_measure:}{54}{subsubsection.6.4.4}% 
+\contentsline {section}{\numberline {7}User app}{56}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Especificaciones t\IeC {\'e}cnicas}{57}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {7.2}Requerimientos Funcionales}{59}{subsection.7.2}% 
+\contentsline {subsection}{\numberline {7.3}Funciones adicionales}{61}{subsection.7.3}% 
+\contentsline {section}{\numberline {8}Pruebas y resultados}{65}{section.8}% 
+\contentsline {subsection}{\numberline {8.1}Pruebas unitarias}{65}{subsection.8.1}% 
+\contentsline {subsection}{\numberline {8.2}Pruebas de integraci\IeC {\'o}n}{66}{subsection.8.2}% 
+\contentsline {subsection}{\numberline {8.3}Resultados}{68}{subsection.8.3}% 
+\contentsline {section}{\numberline {9}Conclusiones y Trabajos futuros}{70}{section.9}% 
+\contentsline {subsection}{\numberline {9.1}Conclusiones}{70}{subsection.9.1}% 
+\contentsline {subsection}{\numberline {9.2}Trabajos futuros.}{71}{subsection.9.2}% 
+\contentsline {subsubsection}{\numberline {9.2.1}Pruebas con m\IeC {\'a}s dispositivos.}{71}{subsubsection.9.2.1}% 
+\contentsline {subsubsection}{\numberline {9.2.2}Integraci\IeC {\'o}n de sensores y actuadores al sistema.}{71}{subsubsection.9.2.2}% 
+\contentsline {subsubsection}{\numberline {9.2.3}Interacci\IeC {\'o}n con la interfaz de voz de Google usando ``Dialog flow''.}{71}{subsubsection.9.2.3}% 
+\contentsline {section}{Referencias}{72}{subsubsection.9.2.3}% 

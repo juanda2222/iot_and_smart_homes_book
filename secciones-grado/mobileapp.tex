@@ -1,8 +1,20 @@
 \customsection{User app}
 
-Teniendo en miras de la escalabilidad deseada para este sistema se escogió el framework de desarrollo de aplicaciones móviles llamado React Native. Este es un framework de JavaScript desarrollado y mantenido por Facebook Inc con ventajas significativas desde la perspectiva de diseño: permite desarrollar aplicaciones nativas para Android y iOS a través de un sistema de traducción de componentes desde JavaScript al lenguaje nativo de la maquina (Java para Android y Swift para IOS), por ende, las aplicaciones desarrolladas en este framework tienen un desempeño muy similar a las implementadas directamente en los lenguajes nativos correspondientes.
+Para el desarrollo de este sistema se decidió implementar la aplicación utilizando nuevas tecnologías de desarrollo multipltaforma para móviles como: React native, Flutter, Ionic. Lo anterior debido a que, dado que se desea proyectar la aplicacion a una escala mundial, es necesario desarrollar aplicativos para ambos sistemas operativos (Ios y Android), pero tener un equipo de desarrollo de ambas plataformas resulta mas costoso que tener un equipo de una tecnología híbrida.
 \vspace{0.5cm}\\
-En adición, una ventaja estratégica que tiene el desarrollar aplicaciones a través de este framework es que ambos desarrollos (para IOS y Android) quedan con las mismas interfaces gráficas, lo que le da al cliente la misma experiencia de usuario sin importar en que plataforma se encuentre.
+Teniendo en cuenta lo anterior, los frameworks para el desarrollo de aplicaciones móviles híbridas más famosos en la actualidad son React Native, Flutter e Ionic.
+\vspace{0.5cm}\\
+Por una parte, React Native es un framework open source de Javasript creado y mantenido por Facebook Inc y posee 78,400 estrellas en el repositorio publico en Github \cite{mobilestadistics}. 
+\vspace{0.5cm}\\
+Por otro lado, Flutter es un framework para el lenguaje de programación Dart. Ambos Dart y Flutter son creados y mantenidos por Google y el repositorio de Flutter posee 68,000 estrellas en Github\cite{mobilestadistics}.
+\vspace{0.5cm}\\
+Finalmente, Ionic es un framework de Javascript creado y mantenido por la corporacion Drift Co. Su repositorio en Guithub tiene 39,100 estrellas.
+\vspace{0.5cm}\\
+Teniendo en cuenta lo anterior, se escogió el framework con mayor acogida por la comunidad de desarrolladores, es decir, React Native. En adición, la desición tambien tuvo en mente la necesidad alejarse de productos no estables, puesto que los frameworks de desarrollo móvil multi plataforma son muy nuevos y pueden existir bugs no reportados. Por ejemplo, Flutter, no tiene una versión estable soportada por Google.
+\vspace{0.5cm}\\
+React Native permite desarrollar aplicaciones nativas para Android y iOS a través de un sistema de traducción de componentes desde JavaScript al lenguaje nativo de la maquina (Java para Android y Swift para IOS). Por ende, las aplicaciones desarrolladas en este framework tienen un desempeño muy similar a las implementadas directamente en los lenguajes nativos correspondientes.
+\vspace{0.5cm}\\
+Además, una ventaja estratégica que tiene el desarrollar aplicaciones a través de este framework es que ambos desarrollos (para IOS y Android) quedan con las mismas interfaces gráficas, lo que le da al cliente la misma experiencia de usuario sin importar en que plataforma se encuentre.
 \vspace{0.5cm}\\
 Aunque desarrollar aplicaciones para Android y IOS con el mismo lenguaje de programación suena extremadamente ventajoso, hay limitaciones técnicas que serán mencionadas más adelante en este capítulo.
 
@@ -30,13 +42,13 @@ Para poder realizar el aplicativo se utilizaron diferentes librerías de JavaScr
 \end{figure}
 Teniendo en cuenta que React\_native traduce todos sus componentes al lenguaje nativo del celular, es necesario entender que no todas las librerías de JavaScript se pueden usar para el framework, únicamente aquellas que tienen incluido el enlace de bajo nivel con ambos sistemas operativos. Por ende, las librerías con mayor compatibilidad son las que están desarrolladas exclusivamente con JavaScript puro. 
 \vspace{0.5cm}\\
-Con la anterior consideración en mente, en el proceso de desarrollo se presentó un problema por asumir incorrectamente que un ``snipet'' (Archivo o script que cumple una función en específico) era capaz de funcionar en el entorno de programación de React-Native. Este pequeño ``snipet'' fue desarrollado pensando en integrar las funcionalidades del protocolo de comunicación Mqtts a la aplicación; pero usaba librerías que estaban basadas en paquetes de bajo nivel equivocados, es decir, para computadores de uso comercial como linux o windows. Por ende, las funcionalidades de tiempo real fueron implementadas utilizando únicamente el protocolo de comunicación Https.
+Con la anterior consideración en mente, en el proceso de desarrollo se presentó un problema por asumir incorrectamente que un ``snipet'' (Archivo o script que cumple una función en específico) era capaz de funcionar en el entorno de programación de React-Native. Este pequeño ``snipet'' fue desarrollado pensando en integrar las funcionalidades del protocolo de comunicación Mqtts a la aplicación; pero usaba librerías que estaban basadas en paquetes de bajo nivel equivocados, es decir, para computadores de uso comercial como Linux o Windows. Por ende, las funcionalidades de tiempo real fueron implementadas utilizando únicamente el protocolo de comunicación Https.
 \vspace{0.5cm}\\
 Para finalizar, de las librerías utilizadas, se puede observar que la mayoría son para mejorar la interfaz gráfica, mejorar la experiencia de usuario u obtener la misma vista entre sistemas operativos Android y Ios.
 
 \subsection{Requerimientos Funcionales}
 
-Debido a que durante el proceso de planeación del proyecto también se utilizó la herramienta de RUP para definir las especificaciones de esta aplicación, y estos requerimientos guiaron el proceso de desarrollo, se explicará cómo se implementaron las especificaciones establecidas:
+Debido a que durante el proceso de planeación del proyecto también se utilizó la tabla de requerimientos \ref{tab0} para definir las especificaciones de esta aplicación, y estos requerimientos guiaron el proceso de desarrollo, se explicará cómo se implementaron las especificaciones establecidas:
 
 \begin{enumerate}
 	\item \textsl{``El usuario debe poder acceder a la información medida en tiempo real:''} Para solucionar este requerimiento, en una primera etapa de desarrollo, se optó por utilizar una librería llamada ``react-native-mqtt''. Esta librería funcionaria como puente entre las librerías: ``Paho Mqtt Client' de Android y ``Mqtt Framework'' de IOS, pero debido al estado tan pionero de las tecnologías de desarrollo de React Native y el protocolo de comunicación Mqtt, la librería no era estable y muchas otras similares tampoco. 
@@ -51,7 +63,7 @@ Debido a que durante el proceso de planeación del proyecto también se utilizó
 	\end{figure}
 	\item  \textit{``El usuario debe ser capaz de cambiar los parámetros de configuraciones establecidos por defecto para la vivienda del solar Decathlon:''} Por defecto los parámetros de la vivienda del Solar Decathlon involucran unos horarios de uso de las cargas eléctricas, por ende, cuando el usuario realiza un cambio en la aplicación celular el sistema en sitio desactiva su configuración predeterminado. 
 	\vspace{0.5cm}\\
-	Finalmente, se implementó una escena de configuración. Esta escena, no se añadió ninguna entrada de usuario y se dejó para ilustrar la posibilidad de incluirlo en el futuro. La escena se puede observar en la figura \ref{fig_18}.
+	Finalmente, se implementó una escena de configuración. Esta escena, no se añadió ninguna entrada de usuario y se dejó para ilustrar la posibilidad de incluirlo en el futuro. La escena se puede observar en la figura \ref{fig_18}. En conclusión, no se cumplió este requerimiento.
 	
 	\begin{figure}[htbp]
 		\centerline{\includegraphics[width=5cm]{./figuras/mobile_settings.jpeg}}
@@ -59,17 +71,17 @@ Debido a que durante el proceso de planeación del proyecto también se utilizó
 		\label{fig_18}
 	\end{figure}
 	
-	\item \textit{``El usuario debe poder acceder al histórico del mes y la relación de sus gastos con ellos:''} Para implementar este requerimiento se utilizaron barras circulares de progreso que indican la cantidad de energia o agua que ha consumido el usuario en el día, comparándola con un valor promedio. La escena desarrollada para solucionar este requerimiento se puede ver en la figura \ref{fig_13} donde el usuario puede panear horizontalmente el centro de la pantalla para revelar los otros indicadores.
+	\item \textit{``El usuario debe poder acceder al histórico del mes y la relación de sus gastos con ellos:''} Para implementar este requerimiento se utilizaron barras circulares de progreso que indican la cantidad de energía o agua que ha consumido el usuario en el día, comparándola con un valor promedio. La escena desarrollada para solucionar este requerimiento se puede ver en la figura \ref{fig_13} donde el usuario puede deslizar horizontalmente el centro de la pantalla para revelar los otros indicadores.
 	\begin{figure}[htbp]
 		\centerline{\includegraphics[width=5cm]{./figuras/mobile_home.jpeg}}
 		\caption{Escena para la visualización del consumo histórico. Fuente: propia}
 		\label{fig_14}
 	\end{figure}
-	\item  \textit{``La aplicación notificara al usuario cuando la factura este vencida:''} para este requerimiento se implementó una función adicional en el aplicativo en sitio, por ende, para esta versión de la aplicación no se desarrolló ningún componente relacionado con esta necesidad.
+	\item  \textit{``La aplicación notificará al usuario cuando la factura este vencida:''} para este requerimiento se implementó una función adicional en el aplicativo en sitio, por ende, el requerimiento se cumplió desde la aplicación de escritorio.
 	
-	\item \textit{``El usuario debe ser capaz de poder ver su impacto ambiental basado en datos cualitativos y cuantitativos:''} Teniendo en cuenta la figura \ref{fig_14} uno de los indicadores corresponde a un indicador de sostenibilidad que está basado en la huella de carbono del consumo de agua y el consumo eléctrico, pero el componente cualitativo no fue implementado para esta versión de la aplicación.
+	\item \textit{``El usuario debe ser capaz de poder ver su impacto ambiental basado en datos cualitativos y cuantitativos:''} Teniendo en cuenta la figura \ref{fig_14} uno de los indicadores corresponde a un indicador de sostenibilidad que está basado en la huella de carbono del consumo de agua y el consumo eléctrico, pero el componente cualitativo fue incluido en la notificacion e-mail al fin del mes.
 	
-	\item \textit{``El sistema debe ser capaz de notificar las perdidas eléctricas y por consiguiente económicas de un mal uso de los horarios establecidos por defecto:''} Para implementar este requerimiento se desarrolló en el aplicativo en sitio la función de notificación automática.
+	\item \textit{``El sistema debe ser capaz de notificar las perdidas eléctricas y por consiguiente económicas de un mal uso de los horarios establecidos por defecto:''} Para implementar este requerimiento se desarrolló en el aplicativo en sitio la función de notificación automática. Es decir las notificaciones por perdidas no fueron incluidas en esta aplicación.
 	
 \end{enumerate}
 
@@ -104,21 +116,3 @@ En adición a los requerimientos funcionales se añadieron características a la
 	\end{figure}	
 \end{enumerate}
 
-\subsection{Pruebas de concepto}
-Para finalizar, debido a que el sistema desarrollado está constituido enteramente por software se decidió adicionar un componente de hardware para probar conceptualmente la capacidad de añadir cualquier sistema de medición o actuación.
-\vspace{0.5cm}\\
-Como dispositivo de medición se utilizó un medidor bifásico de la empresa Inelca con una interfaz de comunicación Rs485 \ref{32}. Utilizando esta interfaz y un conversor USB a Rs485 se logró comunicar la Raspberry con el medidor de Inelca.
-\vspace{0.5cm}\\
-\begin{figure}[htbp]
-	\centerline{\includegraphics[width=5cm]{./figuras/concepto_1.png}}
-	\caption{Dispositivo Inelca utilizado para la prueba de concepto. Fuente: propia}
-	\label{fig_32}
-\end{figure}
-
-Para finalizar, se puso a prueba el sistema añadiendo la función de adquisición necesaria para obtener el valor del voltaje Rms del medidor a partir de una trama serial tipo modbus, tal como se observa en la figura \ref{fig_33}.
-
-\begin{figure}[htbp]
-	\centerline{\includegraphics[width=5cm]{./figuras/concepto_2.png}}
-	\caption{Prueba de concepto usando todos los sistemas. Fuente: propia}
-	\label{fig_33}
-\end{figure}

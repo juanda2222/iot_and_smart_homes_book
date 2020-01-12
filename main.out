@@ -16,39 +16,44 @@
 \BOOKMARK [1][-]{section.2}{Introducci\363n}{}% 16
 \BOOKMARK [2][-]{subsection.2.1}{Contexto introductorio}{section.2}% 17
 \BOOKMARK [2][-]{subsection.2.2}{Lineamientos de desarrollo}{section.2}% 18
-\BOOKMARK [2][-]{subsection.2.3}{Dise\361o Generalizado}{section.2}% 19
-\BOOKMARK [1][-]{section.3}{Api de animaci\363n}{}% 20
-\BOOKMARK [2][-]{subsection.3.1}{Investigaci\363n y conceptualizaci\363n}{section.3}% 21
-\BOOKMARK [2][-]{subsection.3.2}{Api de java}{section.3}% 22
-\BOOKMARK [2][-]{subsection.3.3}{Api de Python y Qt}{section.3}% 23
-\BOOKMARK [1][-]{section.4}{House Manager}{}% 24
-\BOOKMARK [2][-]{subsection.4.1}{Especificaciones t\351cnicas}{section.4}% 25
-\BOOKMARK [2][-]{subsection.4.2}{Requerimientos Funcionales}{section.4}% 26
-\BOOKMARK [2][-]{subsection.4.3}{Funciones adicionales}{section.4}% 27
-\BOOKMARK [2][-]{subsection.4.4}{Algoritmos Utilizados}{section.4}% 28
-\BOOKMARK [3][-]{subsubsection.4.4.1}{Scheduler Handler}{subsection.4.4}% 29
-\BOOKMARK [3][-]{subsubsection.4.4.2}{Remote Mode Handler}{subsection.4.4}% 30
-\BOOKMARK [3][-]{subsubsection.4.4.3}{Mail Notification Handler}{subsection.4.4}% 31
-\BOOKMARK [3][-]{subsubsection.4.4.4}{Data Report Handler}{subsection.4.4}% 32
-\BOOKMARK [3][-]{subsubsection.4.4.5}{Indicator Handler}{subsection.4.4}% 33
-\BOOKMARK [1][-]{section.5}{Serverless backend}{}% 34
-\BOOKMARK [2][-]{subsection.5.1}{Especificaciones t\351cnicas}{section.5}% 35
-\BOOKMARK [2][-]{subsection.5.2}{Base de datos relacional y no relacional}{section.5}% 36
-\BOOKMARK [2][-]{subsection.5.3}{Relaci\363n de requerimientos funcionales}{section.5}% 37
-\BOOKMARK [2][-]{subsection.5.4}{Funciones de nube}{section.5}% 38
-\BOOKMARK [3][-]{subsubsection.5.4.1}{Get\137historical\137data:}{subsection.5.4}% 39
-\BOOKMARK [3][-]{subsubsection.5.4.2}{Send\137command:}{subsection.5.4}% 40
-\BOOKMARK [3][-]{subsubsection.5.4.3}{IOT\137gateway\137control:}{subsection.5.4}% 41
-\BOOKMARK [3][-]{subsubsection.5.4.4}{IOT\137gateway\137measure:}{subsection.5.4}% 42
-\BOOKMARK [1][-]{section.6}{User app}{}% 43
-\BOOKMARK [2][-]{subsection.6.1}{Especificaciones t\351cnicas}{section.6}% 44
-\BOOKMARK [2][-]{subsection.6.2}{Requerimientos Funcionales}{section.6}% 45
-\BOOKMARK [2][-]{subsection.6.3}{Funciones adicionales}{section.6}% 46
-\BOOKMARK [2][-]{subsection.6.4}{Pruebas de concepto}{section.6}% 47
-\BOOKMARK [1][-]{section.7}{Conclusiones y Trabajos futuros}{}% 48
-\BOOKMARK [2][-]{subsection.7.1}{Conclusiones}{section.7}% 49
-\BOOKMARK [2][-]{subsection.7.2}{Trabajos futuros.}{section.7}% 50
-\BOOKMARK [3][-]{subsubsection.7.2.1}{Pruebas con m\341s dispositivos.}{subsection.7.2}% 51
-\BOOKMARK [3][-]{subsubsection.7.2.2}{Integraci\363n de sensores y actuadores al sistema.}{subsection.7.2}% 52
-\BOOKMARK [3][-]{subsubsection.7.2.3}{Interacci\363n con la interfaz de voz de Google usando ``Dialog flow''.}{subsection.7.2}% 53
-\BOOKMARK [1][-]{subsubsection.7.2.3}{Referencias}{}% 54
+\BOOKMARK [1][-]{section.3}{Dise\361o del sistema}{}% 19
+\BOOKMARK [2][-]{subsection.3.1}{Dise\361o conceptual}{section.3}% 20
+\BOOKMARK [2][-]{subsection.3.2}{Dise\361o final}{section.3}% 21
+\BOOKMARK [1][-]{section.4}{Api de animaci\363n}{}% 22
+\BOOKMARK [2][-]{subsection.4.1}{Investigaci\363n y conceptualizaci\363n}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.2}{Api de java}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.3}{Api de Python y Qt}{section.4}% 25
+\BOOKMARK [1][-]{section.5}{House Manager}{}% 26
+\BOOKMARK [2][-]{subsection.5.1}{Especificaciones t\351cnicas}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.2}{Requerimientos Funcionales}{section.5}% 28
+\BOOKMARK [2][-]{subsection.5.3}{Funciones adicionales}{section.5}% 29
+\BOOKMARK [2][-]{subsection.5.4}{Algoritmos Utilizados}{section.5}% 30
+\BOOKMARK [3][-]{subsubsection.5.4.1}{Scheduler Handler}{subsection.5.4}% 31
+\BOOKMARK [3][-]{subsubsection.5.4.2}{Remote Mode Handler}{subsection.5.4}% 32
+\BOOKMARK [3][-]{subsubsection.5.4.3}{Mail Notification Handler}{subsection.5.4}% 33
+\BOOKMARK [3][-]{subsubsection.5.4.4}{Data Report Handler}{subsection.5.4}% 34
+\BOOKMARK [3][-]{subsubsection.5.4.5}{Indicator Handler}{subsection.5.4}% 35
+\BOOKMARK [1][-]{section.6}{Serverless backend}{}% 36
+\BOOKMARK [2][-]{subsection.6.1}{Especificaciones t\351cnicas}{section.6}% 37
+\BOOKMARK [2][-]{subsection.6.2}{Base de datos relacional y no relacional}{section.6}% 38
+\BOOKMARK [2][-]{subsection.6.3}{Relaci\363n de requerimientos funcionales}{section.6}% 39
+\BOOKMARK [2][-]{subsection.6.4}{Funciones de nube}{section.6}% 40
+\BOOKMARK [3][-]{subsubsection.6.4.1}{Get\137historical\137data:}{subsection.6.4}% 41
+\BOOKMARK [3][-]{subsubsection.6.4.2}{Send\137command:}{subsection.6.4}% 42
+\BOOKMARK [3][-]{subsubsection.6.4.3}{IOT\137gateway\137control:}{subsection.6.4}% 43
+\BOOKMARK [3][-]{subsubsection.6.4.4}{IOT\137gateway\137measure:}{subsection.6.4}% 44
+\BOOKMARK [1][-]{section.7}{User app}{}% 45
+\BOOKMARK [2][-]{subsection.7.1}{Especificaciones t\351cnicas}{section.7}% 46
+\BOOKMARK [2][-]{subsection.7.2}{Requerimientos Funcionales}{section.7}% 47
+\BOOKMARK [2][-]{subsection.7.3}{Funciones adicionales}{section.7}% 48
+\BOOKMARK [1][-]{section.8}{Pruebas y resultados}{}% 49
+\BOOKMARK [2][-]{subsection.8.1}{Pruebas unitarias}{section.8}% 50
+\BOOKMARK [2][-]{subsection.8.2}{Pruebas de integraci\363n}{section.8}% 51
+\BOOKMARK [2][-]{subsection.8.3}{Resultados}{section.8}% 52
+\BOOKMARK [1][-]{section.9}{Conclusiones y Trabajos futuros}{}% 53
+\BOOKMARK [2][-]{subsection.9.1}{Conclusiones}{section.9}% 54
+\BOOKMARK [2][-]{subsection.9.2}{Trabajos futuros.}{section.9}% 55
+\BOOKMARK [3][-]{subsubsection.9.2.1}{Pruebas con m\341s dispositivos.}{subsection.9.2}% 56
+\BOOKMARK [3][-]{subsubsection.9.2.2}{Integraci\363n de sensores y actuadores al sistema.}{subsection.9.2}% 57
+\BOOKMARK [3][-]{subsubsection.9.2.3}{Interacci\363n con la interfaz de voz de Google usando ``Dialog flow''.}{subsection.9.2}% 58
+\BOOKMARK [1][-]{subsubsection.9.2.3}{Referencias}{}% 59

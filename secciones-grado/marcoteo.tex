@@ -11,11 +11,11 @@ Se define como un conjunto de componentes de software que operan en de manera re
 	\item \textbf{Biblioteca:} En programación, una biblioteca o librería es un conjunto de implementaciones funcionales, diseñadas en un lenguaje de programación específico, la cual ofrece una interfaz para la funcionalidad que se invoca.
 \end{itemize}
 
-La arquitectura de software que se implementó en este proyecto consta de 3 bloques importantes; un servicio en la nube, una aplicación celular y una de escritorio. Estos a su vez utilizan herramientas, como las anteriormente descritas, para comunicar o relacionar elementos internamente.
+El sistema que se implementó se basa en un modelo cliente servidor y consta de 3 bloques importantes; un servicio en la nube, una aplicación celular y una de escritorio. Estos a su vez utilizan herramientas, como las anteriormente descritas, para comunicar o relacionar elementos internamente.
 
 \subsection{Aplicación de escritorio.} 
 
-Una aplicación de escritorio es cualquier software que pueda ser instalado en un computador o sistema de cómputo, y que permita ejecutar ciertas rutinas. En este sentido una aplicación web puede ser una aplicación de escritorio. Los lenguajes de programación de aplicaciones de escritorio son un conjunto más amplio, los que más predominan son aquellos basados en máquinas virtuales o entornos de ejecución puesto que permiten realizar desarrollos independientes del sistema operativo. Dentro de los más conocidos están los lenguajes: Java, Python, C++, Golang, etc.
+Una aplicación de escritorio es cualquier software que pueda ser instalado en un computador o sistema de cómputo, y que permita ejecutar ciertas rutinas. En este sentido, una aplicación desarrollada como si fuese para web puede ser una aplicación de escritorio si se desarrolla utilizando el \textit{framework} apropiado (Electron, Ionic). Los lenguajes de programación de aplicaciones de escritorio son un conjunto más amplio, los que más predominan son aquellos basados en máquinas virtuales o entornos de ejecución puesto que permiten realizar desarrollos independientes del sistema operativo. Dentro de los más conocidos están los lenguajes: Java, Python, C++, Golang, etc.
 \vspace{0.5cm}\\
 Dentro de los elementos materiales del sistema se encuentran los dispositivos que van a encargarse de la capa física durante el proceso de comunicación y adquisición de datos, a continuación se definirán los componentes más importantes de estos componentes.
 
@@ -25,8 +25,8 @@ Una aplicación web es un programa que se codifica en un lenguaje interpretable 
 
 \subsection{Servidor}
 
-Un módulo hardware y software con amplia capacidad de almacenamiento y procesamiento. Desde el punto de vista del software, los servidores son programas de computador que atienden las peticiones de otros programas llamados clientes. Dentro de estos llamados los principales servicios de un servidor son: compartir datos, información y recursos de hardware. Desde el punto de vista de hardware toda la información entrante de los dispositivos (clientes) es recibida a través de una interfaz de red y reconocida para su posterior procesamiento y almacenamiento.
-Desde una perspectiva más simplista un servidor es un computador con especificaciones de hardware fijas como: RAM, CPU, memoria interna, etc, enfocado únicamente en ofrecer los servicios anteriormente mencionados.
+Desde el punto de vista del software, los servidores son programas de computador que atienden las peticiones de otros programas llamados clientes. Dentro de estos llamados los principales servicios de un servidor son: compartir datos, información y recursos de hardware. Desde el punto de vista de hardware toda la información entrante de los dispositivos (clientes) es recibida a través de una interfaz de red y reconocida para su posterior procesamiento y almacenamiento.
+Desde una perspectiva más simplista un servidor es un computador que ejecuta una serie de programas que le permiten ofrecer diferentes servicios a travez de una red de computadores.
 
 \subsection{Tcp y Tls}
 
@@ -80,7 +80,7 @@ Un dispositivo es objeto hardware que puede ser visto como un sistema embebido c
 	\item \textbf{Colector Cliente:} Este componente es el encargado de gestionar toda la información de los sensores que será enviada a manera de flujos de datos utilizando un protocolo de comunicación, esta capa de software añade las cabeceras y los formatos necesarias para la transmisión de datos.
 	\item \textbf{Capa de Sensores:} Este software es el encargado de proveer todos los drivers lógicos para la conexión de los elementos físicos conectados al dispositivo.
 \end{itemize}
-Debido al tiempo estipulado para el proyecto, el dispositivo y los métodos de adquisición no serán de alta importancia en el desarrollo de la arquitectura y se asumirá que todo desarrollo de los elementos de hardware debe estar solucionado junto con la comunicación con los mismos.
+Debido al tiempo estipulado para el proyecto, el dispositivo y los métodos de adquisición no serán de alta importancia en el desarrollo del sistema y se asumirá que todo desarrollo de los elementos de hardware debe estar solucionado junto con la comunicación con los mismos.
 
 
 \subsection{Teoría de colores}
